@@ -10,23 +10,23 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <link href="../assets/img/favicon.png" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -52,22 +52,22 @@
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html#header" class="scrollto">Salve's</a></h1>
+      <!-- <h1 class="logo mr-auto"><a href="index.html#header" class="scrollto">Salve's</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html#header" class="logo mr-auto scrollto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <a href="/" class="logo mr-auto scrollto"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#services">Facilities</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="index.html#services">Facilities</a></li>
           <li><a href="/admissions">Admissions</a></li>
           <li><a href="/photogallery">Photo Gallery</a></li>
-          <li class="drop-down"><a href="#">About Us</a>
+          <li class="drop-down active"><a href="#">About Us</a>
             <ul>
-              <li><a href="/about">The Insititute</a></li>
-              <li><a href="/director">Our Director Body</a></li>
-              <li><a href="/staff">Our Staff</a></li>
-              <li><a href="/principal">Principal’s Desk</a></li>
+              <li><a href="./About/insititute">The Insititute</a></li>
+              <li><a href="./About/director">Our Director Body</a></li>
+              <li><a href="./About/staff">Our Staff</a></li>
+              <li><a href="./About/principal">Principal’s Desk</a></li>
             </ul>
           </li>
           <li><a href="/contact">Contact Us</a></li>
@@ -81,26 +81,19 @@
   <main id="main">
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
+        <div class="carousel-inner" role="listbox" id="header_slider">
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
+          <div class="carousel-item active" style="background-image: url('./assets/img/campus/1.jpg')">
             <div class="carousel-caption">
-              <h2 class="display-4">First Slide</h2>
+              <h2 class="display-4">Our Campus</h2>
               <p class="lead">This is a description for the first slide.</p>
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080')">
+          <div class="carousel-item" style="background-image: url('./assets/img/campus/2.jpg')">
             <div class="carousel-caption">
               <h2 class="display-4">Second Slide</h2>
               <p class="lead">This is a description for the second slide.</p>
-            </div>
-          </div>
-          <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
-            <div class="carousel-caption">
-              <h2 class="display-4">Third Slide</h2>
-              <p class="lead">This is a description for the third slide.</p>
             </div>
           </div>
         </div>
@@ -142,7 +135,7 @@
               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
               culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            <a href="/About/insititute" class="btn-learn-more">Learn More</a>
           </div>
         </div>
 
@@ -158,10 +151,9 @@
           <div class="col-lg-6 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
 
             <div class="content">
-              <h3>Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
+              <h3><strong>Annoucements</strong></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit</p><br>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit</p>
             </div>
 
             <div class="accordion-list">
