@@ -33,73 +33,12 @@
 	<!--External fonts-->
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
-	<style media="screen">
-	#mobile-view-login {
-box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
-background: white;
-z-index: 25;
-width: 100%;
-height: 50px;
-position: fixed;
-bottom: 0px;
-left: 0px;
-text-align: center;
-padding: 5px 0px;
-font-size: 25px !important; }
-
-#mobile-view-login a:hover {
-border-color: #ed1c24 !important; }
-
-@media screen and (min-width: 1024px) {
-#mobile-view-login {
-	display: none; } }
-
-	</style>
-
 </head>
 
 
 <body>
 
 <!-- Header -->
-<div id="mobile-view-login">
-    <div class="container-fluid" style="padding:0">
-        <div class="login-block">
-            <!-- <span style="font-size: 16px">Login :</span> -->
-
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding-right:5px;padding-left:5px;">
-            <a href="login.html?q=customer" target="_blank" id="mobile-login-open" data-toggle="modal" class="login-tag login-tag-font-size">
-            <i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp;Login
-            </a>
-            </div>
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="padding-right:5px;padding-left:5px">
-            <a href="renew.html" target="_blank" class="login-tag login-tag-font-size">
-            <i class="fa fa-refresh" aria-hidden="true"></i> &nbsp; Renew
-            </a>
-            </div>
-
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="padding-right:5px;padding-left:5px">
-            <a href="index.php#ourPkgs" class="login-tag login-tag-font-size">
-            <i class="fa fa-bookmark-o" aria-hidden="true"></i>
-            &nbsp; Plans
-            </a>
-            </div>
-
-            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="padding-right:5px;padding-left:5px">
-            <a id="mob-menu-click" href="#" class="login-tag login-tag-font-size">
-            <i id="openMenu" class="fa fa-bars" aria-hidden="true" style="font-size:18px"></i>
-            <i id="closeMenu" class="fa fa-times" aria-hidden="true" style="display:none;font-size:18px"></i>
-            </a>
-            </div>
-            <!-- <a href="#" class="login-tag login-tag-font-size">Contact</a>
-            | -->
-
-
-            <!-- <span style="font-size: 16px">Plan :</span>
-            <a href="#" class="login-tag">Renew</a> -->
-        </div>
-    </div>
-</div>
 
 <div class="top-bar top-bar">
 	<div class="container">
@@ -545,13 +484,13 @@ border-color: #ed1c24 !important; }
 
 	<!-- Background-mountains -->
 
-	<div class="container-fluid">
+	<div class="container-fluid" style="margin-top:-40px">
 		<div class="row">
 			<div class="background-mountains medium-padding120 scrollme">
 
 				<div class="images">
-					<img src="img/mountain1.png" alt="mountain">
-					<img src="img/mountain2.png" alt="mountain">
+					<img src="img/mountain1.png" alt="mountain" style="z-index: -1">
+					<img src="img/mountain2.png" alt="mountain" style="z-index: -1">
 				</div>
 
 				<div class="container">
@@ -568,55 +507,57 @@ border-color: #ed1c24 !important; }
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
 							<div class="info-box--standard-centered">
 								<div class="info-box-image">
 									<img src="img/benefit1.svg" alt="image" width="130" height="130">
 								</div>
 								<div class="info-box-content">
 									<h4 class="info-box-title">UNLIMITED</h4>
-									<p class="text">Dont worry about data anymore! Surf, watch & play all day.</p>
+									<p class="text" style="color:black;">Dont worry about data anymore! Surf, watch & play all day.</p>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
 							<div class="info-box--standard-centered">
 								<div class="info-box-image">
 									<img src="img/benefit2.svg" alt="image" width="130" height="130">
 								</div>
 								<div class="info-box-content">
 									<h4 class="info-box-title">ULTRA FAST</h4>
-									<p class="text">Experience Bufferless streaming & high-speed downloads with our technology</p>
+									<p class="text" style="color:black;">Experience Bufferless streaming & high-speed downloads with our technology</p>
 								</div>
 							</div>
 						</div>
 
 						<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
 							<div class="info-box--standard-centered">
-								<div class="info-box-image">
+								<div>
 									<img src="img/benefit3.svg" alt="image" width="130" height="130">
 								</div>
+								<br>
 								<div class="info-box-content">
 									<h4 class="info-box-title">OFC</h4>
-									<p class="text">High-speed internet access through two-way optical fiber cable (OFC) network.</p>
+									<p class="text" style="color:black;">High-speed internet access through two-way optical fiber cable (OFC) network.</p>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
 							<div class="info-box--standard-centered">
-								<div class="info-box-image">
+								<div>
 									<img src="img/benefit4.svg" alt="image" width="130" height="130">
 								</div>
+								<br>
 								<div class="info-box-content">
 									<h4 class="info-box-title">ACN</h4>
-									<p class="text">Advanced cable network infrastructure capable of supporting hi-speed internet.</p>
+									<p class="text" style="color:black;">Advanced cable network infrastructure capable of supporting hi-speed internet.</p>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
 							<div class="info-box--standard-centered">
 								<div>
 									<img src="img/benefit5.png" alt="image" width="170" height="170">
@@ -624,7 +565,7 @@ border-color: #ed1c24 !important; }
 								<br>
 								<div class="info-box-content">
 									<h4 class="info-box-title">24/7</h4>
-									<p class="text">Dedicated technical team to resolve all customer queries.</p>
+									<p class="text" style="color:black;">Dedicated technical team to resolve all customer queries.</p>
 								</div>
 							</div>
 						</div>
@@ -638,6 +579,58 @@ border-color: #ed1c24 !important; }
 	</div>
 
 	<!-- End Background-mountains -->
+
+
+	<!-- Subscribe Form -->
+
+	<div class="container-fluid bg-green-color" style="margin-top:-60px">
+	            <div class="row">
+	                <div class="container-fluid" style="margin:0 25px;">
+
+	                    <div class="row">
+
+	                        <div class="subscribe scrollme">
+
+	                            <div class="col-lg-7 col-lg-offset-4 col-md-7 col-md-offset-4 col-sm-12 col-xs-12" style="text-align:center;">
+	                                <h4 class="subscribe-title">
+	                                Quick Connect For New Connection
+	                                </h4>
+	                                <form id="contact_form" class="subscribe-form" method="post" action="send_mail.php">
+	                                <div class="row">
+	                                <div class="col-lg-4">
+	                                <input class=" input-standard-grey input-white" name="name" required="required" placeholder="Your Name" type="text">
+	                                        </div>
+	                                <div class="col-lg-4">
+	                                <input class=" input-standard-grey input-white" name="phone" required="required" placeholder="Phone" type="text">
+	                                        </div>
+	                                <div class="col-lg-4">
+	                                <input class=" input-standard-grey input-white" name="location" required="required" placeholder="Location" type="text">
+	                                        </div>
+	                                </div>
+
+	                                <input style="display:none;" class="input-standard-grey input-white" name="email" value="anonymous@wnet.net.in" type="text">
+
+	                                    <button class="btn btn--dark submit-width">
+	                                        Submit
+	                                        <span class="semicircle--right"></span>
+	                                    </button>
+	                                </form>
+	                                <!-- <div class="sub-title">Sign up for new Seosignt content, updates, surveys & offers.</div> -->
+
+	                            </div>
+
+	                            <div class="images-block">
+	                                <img src="img/subscr-gear.png" alt="gear" class="gear" style="opacity: 1; transform: rotateZ(360deg);">
+	                                <img src="img/subscr1.png" alt="mail" class="mail" style="opacity: 1; bottom: 0px;">
+	                                <img src="img/subscr-mailopen.png" alt="mail" class="mail-2" style="opacity: 1; right: 20px;">
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+
+	<!-- End Subscribe Form -->
 
 
 	<!-- Info-Box -->
@@ -1063,12 +1056,35 @@ border-color: #ed1c24 !important; }
 							<div class="heading align-center">
 								<h4 class="h1 heading-title">Our Pricing Packages</h4>
 								<div class="heading-line">
-									<span class="short-line"></span>
-									<span class="long-line"></span>
-								</div>
-								<p class="heading-text">Claritas est etiam processus dynamicus,
-									qui sequitur mutationem consuetudium.
-								</p>
+                <div style="color:black;width:100%;text-align:center;">
+                    <h5>
+                       Pay for <span style="color:#ed1c24;">10 Months</span> and get <span style="color:#ed1c24;">5 Months</span> free.
+                    </h5>
+                    <br>
+                    <span style="color:#ed1c24">Terms &amp; Conditions:</span>
+                    <br>
+                    <span>Plans rates may differ in different area due to last mile charges, all plans are Exclusive of Taxes applicable. Call <span style="color:#ed1c24">0226112555</span> for more offers and discounts.</span>
+                </div>
+                    <span class="short-line"></span>
+                    <span class="long-line"></span>
+                </div>
+								<div class="row" style="margin-top:5px; margin-bottom:15px; ">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-4">
+                        <p class="text modalHeaderAlign" style="line-height: 60px; color:black;font-size:22px;margin-bottom:5px;">
+                        Showing plans for </p>
+                    </div>
+                    <div class="col-lg-4" id="chooseCityMain">
+												<div class="nice-select" tabindex="0" style="background-color:#4cc2c0; color:#fff">
+													<span class="current">1 Month</span>
+													<ul class="list">
+														<li data-value="1" class="option" style="color:black">1 Month</li>
+														<li data-value="9" class="option" style="color:black">9 Months</li>
+														<li data-value="15" class="option selected focus" style="color:black">15 Months</li>
+													</ul>
+												</div>
+                    </div>
+                </div>
 							</div>
 						</div>
 					</div>
@@ -1510,41 +1526,6 @@ border-color: #ed1c24 !important; }
 
 	<!-- End Clients -->
 
-
-	<!-- Subscribe Form -->
-
-	<div class="container-fluid bg-green-color">
-		<div class="row">
-			<div class="container">
-
-				<div class="row">
-
-					<div class="subscribe scrollme">
-
-						<div class="col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5 col-sm-12 col-xs-12">
-							<h4 class="subscribe-title">Email Newsletters!</h4>
-							<form class="subscribe-form crumina-submit" method="post" data-nonce="crumina-submit-form-nonce" data-type="standard" action="modules/forms/submit.php">
-								<input class="email input-standard-grey input-white" name="email" placeholder="Your Email Address" type="email" required>
-								<button class="subscr-btn">subscribe
-									<span class="semicircle--right"></span>
-								</button>
-							</form>
-							<div class="sub-title">Sign up for new Seosignt content, updates, surveys & offers.</div>
-
-						</div>
-
-						<div class="images-block">
-							<img src="img/subscr-gear.png" alt="gear" class="gear">
-							<img src="img/subscr1.png" alt="mail" class="mail">
-							<img src="img/subscr-mailopen.png" alt="mail" class="mail-2">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- End Subscribe Form -->
 </div>
 
 
@@ -1616,18 +1597,6 @@ border-color: #ed1c24 !important; }
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
 								<a href="#">Web Analytics</a>
 							</li>
-							<li>
-								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Web Development</a>
-							</li>
-							<li>
-								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Content Management</a>
-							</li>
-							<li>
-								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Blog Management</a>
-							</li>
 						</ul>
 
 						<ul class="list list--primary">
@@ -1670,7 +1639,7 @@ border-color: #ed1c24 !important; }
 							<svg enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" points="  54,17 32,36 10,17 " stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><line fill="none" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="10.9" x2="26" y1="48" y2="36"/><path d="  M32.7,49H13c-2.2,0-4-1.8-4-4V19c0-2.2,1.8-4,4-4h38c2.2,0,4,1.8,4,4v15.5" fill="none" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><circle cx="44.9" cy="43.1" fill="none" r="10.1" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><path d="  M44,41.4c0,0-1.3,3.4-0.9,5.1c0.4,1.7,2.6,2.1,3.7,1.1" fill="none" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><g><circle cx="45.4" cy="38.3" fill="#DCE9EE" r="0.9"/><path d="M45.4,37.3c-0.5,0-0.9,0.4-0.9,0.9c0,0.5,0.4,0.9,0.9,0.9s0.9-0.4,0.9-0.9C46.4,37.8,46,37.3,45.4,37.3   L45.4,37.3z" fill="#f15b26"/></g></svg>
 						</div>
 						<div class="content">
-							<a href="#" class="title">info@seosight.com</a>
+							<a href="#" class="title">info@zopens.com</a>
 							<p class="sub-title">online support</p>
 						</div>
 					</div>
@@ -1692,79 +1661,10 @@ border-color: #ed1c24 !important; }
 
 	</div>
 
-	<div class="sub-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <span>
-                        Copyright © 2016 <a href="index.html" class="sub-footer__link">Seosight,</a>
-                        Designed by <a href="https://themeforest.net/user/themefire/portfolio">themefire</a>
-                    </span>
-
-					<span>Developed by <a href="https://themeforest.net/user/crumina/portfolio">Crumina</a></span>
-					<span>Only on <a href="https://themeforest.net/user/crumina/portfolio">Envato Market</a></span>
-
-					<a class="back-to-top" href="#">
-						<svg class="back-to-top">
-							<use xlink:href="#to-top"></use>
-						</svg>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
 
 </footer>
 
 <!-- End Footer -->
-
-
-<!-- Sign-in Form Popup -->
-
-<div class="window-popup">
-	<a href="#" class="popup-close js-popup-close cd-nav-trigger">
-		<i class="seosight-icon seoicon-delete"></i>
-	</a>
-
-	<div class="sign-in-popup">
-		<h5 class="title">Register to SeoSight</h5>
-		<p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magnais.</p>
-		<form class="form-validate contact-form">
-			<div class="row">
-
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<input class="input-standard-grey" placeholder="First Name" type="text">
-				</div>
-
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<input class="input-standard-grey" placeholder="Last Name" type="text">
-				</div>
-
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<input class="input-standard-grey" placeholder="Your Email" type="email">
-					<input class="input-standard-grey" placeholder="Your Password" type="password">
-
-					<select>
-						<option value="MA">Male</option>
-						<option value="FE">Female</option>
-					</select>
-
-					<div class="remember-wrap">
-						<div class="checkbox">
-							<input id="terms" type="checkbox" name="terms" value="terms">
-							<label for="terms">I accept the Terms and Conditions</label>
-						</div>
-					</div>
-
-					<a href="#" class="btn btn-large btn--primary">Complete Registration!</a>
-				</div>
-
-			</div>
-		</form>
-	</div>
-</div>
-
-<!-- Sign-in Form Popup -->
 
 
 

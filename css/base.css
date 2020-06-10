@@ -576,7 +576,7 @@ input {
       padding-top: 35px; } }
 
 .pt400 {
-  padding-top: 400px; }
+  padding-top: 100px; }
   @media (max-width: 1024px) {
     .pt400 {
       padding-top: 200px; } }
