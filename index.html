@@ -18,7 +18,6 @@
 	<link rel="stylesheet" type="text/css" href="css/widgets-styles.css">
 	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css">
 
-
 	<!--Plugins styles-->
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
@@ -26,12 +25,28 @@
 	<link rel="stylesheet" type="text/css" href="css/primary-menu.css">
 	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
 
-	<!--Styles for RTL-->
+	<!--Styles for Slick Slider-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 	<!--<link rel="stylesheet" type="text/css" href="css/rtl.css">-->
 
 	<!--External fonts-->
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+	<style media="screen">
+
+	.partner_slider_mobile {
+		display: none;
+	}
+
+	@media only screen and (max-width: 768px){
+		.partner_slider_mobile {display: block;}
+		.partner_slider_desktop{display: none;}
+	}
+	</style>
 
 </head>
 
@@ -123,36 +138,16 @@
 								<p class="megamenu-item-info-text">Choose a Service</p>
 							</li>
 							<li class="hover-ver2">
-								<a href="05_service_details_localseo.html"><i class="seoicon-pin-map"></i>
-									Broadband Plans
-								</a>
+								<a href="05_service_details_localseo.html">Broadband Plans</a>
 							</li>
 							<li class="hover-ver2">
-								<a href="07_service_email_marketing.html"><i class="seoicon-mail-send"></i>
-									Lease line Plans
-								</a>
-							</li>
-							<li class="hover-ver2">
-								<a href="06_service_detail.html"><i class="seoicon-chat-comment"></i>
-									Social Media Marketing
-								</a>
+								<a href="07_service_email_marketing.html">Lease line Plans</a>
 							</li>
 							<li class="menu-item-has-children hover-ver2">
-								<a href="04_service_detail_seo.html">
-									<i class="seoicon-search"></i>
-									Campus Wi-Fi Solutions
-								</a>
+								<a href="04_service_detail_seo.html">Campus Wi-Fi Solutions</a>
 							</li>
 							<li class="hover-ver2">
-								<a href="08_service_ppc_management.html"><i class="seoicon-button"></i>
-									Network Infrastructure Setup
-								</a>
-							</li>
-							<li class="menu-item-has-children hover-ver2">
-								<a href="03_services.html">
-									<i class="seoicon-pie-graph-split"></i>
-									Network Maintenance
-								</a>
+								<a href="08_service_ppc_management.html">Network Infrastructure & Maintenance</a>
 							</li>
 						</ul>
 					</li>
@@ -869,182 +864,6 @@
 
 	<!-- End Counters -->
 
-
-	<!-- Recent-case -->
-
-	<div class="container">
-		<div class="row medium-padding120">
-			<div class="recent-case align-center">
-
-				<div class="col-lg-12">
-
-					<div class="row">
-						<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
-							<div class="heading align-center">
-								<h4 class="h1 heading-title">Recent Case Studies</h4>
-								<div class="heading-line">
-									<span class="short-line"></span>
-									<span class="long-line"></span>
-								</div>
-								<p class="heading-text">Claritas est etiam processus dynamicus,
-									qui sequitur mutationem consuetudium.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="case-item-wrap">
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-								<div class="case-item">
-									<div class="case-item__thumb">
-										<img src="img/case1.jpg" alt="our case">
-									</div>
-									<h6 class="case-item__title"><a href="#">Investigationes demonstraverunt legere</a>
-									</h6>
-								</div>
-							</div>
-
-							<div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">
-								<div class="case-item">
-									<div class="case-item__thumb">
-										<img src="img/case2.jpg" alt="our case">
-									</div>
-									<h6 class="case-item__title">Claritas est etiam processus dynamicus</h6>
-								</div>
-							</div>
-
-							<div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">
-								<div class="case-item">
-									<div class="case-item__thumb mouseover poster-3d lightbox shadow animation-disabled" data-offset="5">
-										<img src="img/case3.jpg" alt="our case">
-									</div>
-									<h6 class="case-item__title">quod mazim placerat facer possim assum</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<a href="11_case_studies.html" class="btn btn-medium btn--dark">
-						<span class="text">All Projects</span>
-						<span class="semicircle"></span>
-					</a>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- End Recent-case -->
-
-
-	<!-- Testimonial-slider -->
-
-	<div class="container-fluid">
-		<div class="row">
-			<div class="testimonial-slider scrollme">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<div class="heading">
-								<h4 class="h1 heading-title">Happy Clients
-									About Us</h4>
-								<div class="heading-line">
-									<span class="short-line bg-yellow-color"></span>
-									<span class="long-line bg-yellow-color"></span>
-								</div>
-								<p class="heading-text c-white">Claritas est etiam processus dynamicus, qui lectorum.
-								</p>
-							</div>
-							<div class="signature js-animate-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60">
-									<path fill="none" stroke="#2f2c2c" stroke-width="1.4"
-										  d="M24.78 42.5C11.28 41.06.96 36 1.16 26.86 1.62 11.6 16.76 3.6 28.13 3.25c5.44-.16 9.8 2.38 10.2 5.8.86 7.66-19.23 15.62-19.23 15.62s17.86-6.57 24.66 2.2c2.8 3.6-11.8 10.65-11.8 10.65s-8.8 3.35-7.65-.24c1.78-5.52 16.8-10.1 18.42-10.3 3.17-.4 7.1-.4 8 .12 1.33.78-1.7 4.14-.94 4.86.76.72 3.82-2.55 3.94-1.97.12.57-.64 2.63.58 3 1.2.38 2.3-1.1 4.28-1.5 1.97-.4 1.83-.44 3.6-.12 1.76.32 2.1.64 3.47 1.4 1.36.74.86 2.22 1.96 1.6 1.1-.6 1.43-4.16 2.44-4.04 1.02.1.03 5.38 1.63 4.5 1.6-.85 4.74-7.97 4.74-7.97s-.82 4.04 0 3.93c3.14-.4 8.12-2.57 14.48-3.36 6.37-.78 8.67-.35 11 .24 1.92.48 2.67 2.3 2.67 2.3"
-										  stroke-linecap="round" stroke-linejoin="round"></path>
-									<path fill="none" stroke="#2f2c2c" stroke-width="1.4"
-										  d="M113.7 15.75s-1.1-2.78-3.6-2.08c-5.83 1.62-16.2 7.68-16.44 15.63-.46 16.3 21.1 11.14 22.7 11 13.6-1.2 17.38-9.96 17.36-14.48-.06-14.3-19.07-10.3-21.07-10.07-7.9.92-10.48 1.57-10.48 1.57"></path>
-									<path fill="none" stroke="#2f2c2c" stroke-width="1.4" d="M119.7 1.05c-2.53 13.9-5.1 27.83-2.53 41.44" stroke-linecap="round"></path>
-									<path fill="none" stroke="#2f2c2c" stroke-width="1.4" d="M133.6 27.8c-6.62-.42-12.6.37-17.36 3.35"></path>
-									<path fill="none" stroke="#2f2c2c" stroke-width="1.4"
-										  d="M131.52 32.77s3.95-.13 8.34-.93c2.4-.43 5-1.73 7.87-1.85 2.87-.12 1.74 1.44 3.6 1.38 4.62-.14 7.98-.3 14.92-.7 6.95-.4 9.76-2.76 12.86-.92 1.7 1 1.4 3.13 1.4 3.13"
-										  stroke-linecap="round"></path>
-									<path fill="none" stroke="#2f2c2c" stroke-width="1.4" d="M153.52 31.03s2.27-2.74-.7-3.35c-3.36-.7-3.7 2.43-3.7 2.43"></path>
-								</svg>
-							</div>
-						</div>
-
-						<div class="col-lg-7 col-lg-offset-1 col-md-8 col-sm-12 col-xs-12">
-
-							<div class="testimonial-item">
-								<!-- Slider main container -->
-								<div class="swiper-container testimonial__thumb overflow-visible" data-effect="fade" data-loop="false">
-
-									<div class="swiper-wrapper">
-										<div class="testimonial-slider-item swiper-slide">
-											<div class="testimonial-content">
-												<p class="text" data-swiper-parallax="-200">Nam liber tempor cum soluta nobis eleifend option congue
-													nihil imperdiet doming id quod mazim.
-												</p>
-												<a href="#" class="author" data-swiper-parallax="-150">Jonathan Simpson</a>
-												<a href="#" class="company" data-swiper-parallax="-150">Envato Market</a>
-
-											</div>
-											<div class="avatar" data-swiper-parallax="-50">
-												<img src="img/avatar.png" alt="avatar">
-											</div>
-										</div>
-										<div class="testimonial-slider-item swiper-slide">
-											<div class="testimonial-content">
-												<p class="text" data-swiper-parallax="-200">Nam liber tempor cum soluta nobis eleifend option congue
-													nihil imperdiet doming id quod mazim.
-												</p>
-												<a href="#" class="author" data-swiper-parallax="-150">Jonathan Simpson</a>
-												<a href="#" class="company" data-swiper-parallax="-150">Envato Market</a>
-
-											</div>
-											<div class="avatar" data-swiper-parallax="-50">
-												<img src="img/avatar.png" alt="avatar">
-											</div>
-										</div>
-										<div class="testimonial-slider-item swiper-slide">
-											<div class="testimonial-content">
-												<p class="text" data-swiper-parallax="-200">Nam liber tempor cum soluta nobis eleifend option congue
-													nihil imperdiet doming id quod mazim.
-												</p>
-												<a href="#" class="author" data-swiper-parallax="-150">Jonathan Simpson</a>
-												<a href="#" class="company" data-swiper-parallax="-150">Envato Market</a>
-
-											</div>
-											<div class="avatar" data-swiper-parallax="-50">
-												<img src="img/avatar.png" alt="avatar">
-											</div>
-										</div>
-									</div>
-									<!-- If we need pagination -->
-									<div class="swiper-pagination"></div>
-
-									<div class="quote">
-										<i class="seoicon-quotes"></i>
-									</div>
-								</div>
-
-								<div class="testimonial__thumb-img">
-									<img src="img/testimonial1.png" alt="image">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-img">
-					<img src="img/testimonial2.png" alt="image">
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- End Testimonial-slider -->
-
-
 	<!-- Pricing table -->
 
 	<div class="container-fluid">
@@ -1212,319 +1031,313 @@
 	<!-- End Pricing table -->
 
 
-	<!-- Post-slider -->
+	<!-- Testimonial-slider -->
 
-	<div class="container">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="testimonial-slider scrollme">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="heading">
+								<h4 class="h1 heading-title">Happy Clients
+									About Us</h4>
+								<div class="heading-line">
+									<span class="short-line bg-yellow-color"></span>
+									<span class="long-line bg-yellow-color"></span>
+								</div>
+								<p class="heading-text c-white">Claritas est etiam processus dynamicus, qui lectorum.
+								</p>
+							</div>
+							<div class="signature js-animate-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60">
+									<path fill="none" stroke="#2f2c2c" stroke-width="1.4"
+										  d="M24.78 42.5C11.28 41.06.96 36 1.16 26.86 1.62 11.6 16.76 3.6 28.13 3.25c5.44-.16 9.8 2.38 10.2 5.8.86 7.66-19.23 15.62-19.23 15.62s17.86-6.57 24.66 2.2c2.8 3.6-11.8 10.65-11.8 10.65s-8.8 3.35-7.65-.24c1.78-5.52 16.8-10.1 18.42-10.3 3.17-.4 7.1-.4 8 .12 1.33.78-1.7 4.14-.94 4.86.76.72 3.82-2.55 3.94-1.97.12.57-.64 2.63.58 3 1.2.38 2.3-1.1 4.28-1.5 1.97-.4 1.83-.44 3.6-.12 1.76.32 2.1.64 3.47 1.4 1.36.74.86 2.22 1.96 1.6 1.1-.6 1.43-4.16 2.44-4.04 1.02.1.03 5.38 1.63 4.5 1.6-.85 4.74-7.97 4.74-7.97s-.82 4.04 0 3.93c3.14-.4 8.12-2.57 14.48-3.36 6.37-.78 8.67-.35 11 .24 1.92.48 2.67 2.3 2.67 2.3"
+										  stroke-linecap="round" stroke-linejoin="round"></path>
+									<path fill="none" stroke="#2f2c2c" stroke-width="1.4"
+										  d="M113.7 15.75s-1.1-2.78-3.6-2.08c-5.83 1.62-16.2 7.68-16.44 15.63-.46 16.3 21.1 11.14 22.7 11 13.6-1.2 17.38-9.96 17.36-14.48-.06-14.3-19.07-10.3-21.07-10.07-7.9.92-10.48 1.57-10.48 1.57"></path>
+									<path fill="none" stroke="#2f2c2c" stroke-width="1.4" d="M119.7 1.05c-2.53 13.9-5.1 27.83-2.53 41.44" stroke-linecap="round"></path>
+									<path fill="none" stroke="#2f2c2c" stroke-width="1.4" d="M133.6 27.8c-6.62-.42-12.6.37-17.36 3.35"></path>
+									<path fill="none" stroke="#2f2c2c" stroke-width="1.4"
+										  d="M131.52 32.77s3.95-.13 8.34-.93c2.4-.43 5-1.73 7.87-1.85 2.87-.12 1.74 1.44 3.6 1.38 4.62-.14 7.98-.3 14.92-.7 6.95-.4 9.76-2.76 12.86-.92 1.7 1 1.4 3.13 1.4 3.13"
+										  stroke-linecap="round"></path>
+									<path fill="none" stroke="#2f2c2c" stroke-width="1.4" d="M153.52 31.03s2.27-2.74-.7-3.35c-3.36-.7-3.7 2.43-3.7 2.43"></path>
+								</svg>
+							</div>
+						</div>
 
-		<div class="recent-post-slider medium-padding120">
+						<div class="col-lg-7 col-lg-offset-1 col-md-8 col-sm-12 col-xs-12">
 
-			<div class="row">
+							<div class="testimonial-item">
+								<!-- Slider main container -->
+								<div class="swiper-container testimonial__thumb overflow-visible" data-effect="fade" data-loop="false">
 
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<div class="heading">
-						<h4 class="h1 heading-title">Latest From the Blog</h4>
-						<a href="14_blog.html" class="read-more">Read Our Blog
-							<i class="seoicon-right-arrow"></i>
-						</a>
-						<div class="heading-line">
-							<span class="short-line"></span>
-							<span class="long-line"></span>
+									<div class="swiper-wrapper">
+										<div class="testimonial-slider-item swiper-slide">
+											<div class="testimonial-content">
+												<p class="text" data-swiper-parallax="-200">Nam liber tempor cum soluta nobis eleifend option congue
+													nihil imperdiet doming id quod mazim.
+												</p>
+												<a href="#" class="author" data-swiper-parallax="-150">Jonathan Simpson</a>
+												<a href="#" class="company" data-swiper-parallax="-150">Envato Market</a>
+
+											</div>
+											<div class="avatar" data-swiper-parallax="-50">
+												<img src="img/avatar.png" alt="avatar">
+											</div>
+										</div>
+										<div class="testimonial-slider-item swiper-slide">
+											<div class="testimonial-content">
+												<p class="text" data-swiper-parallax="-200">Nam liber tempor cum soluta nobis eleifend option congue
+													nihil imperdiet doming id quod mazim.
+												</p>
+												<a href="#" class="author" data-swiper-parallax="-150">Jonathan Simpson</a>
+												<a href="#" class="company" data-swiper-parallax="-150">Envato Market</a>
+
+											</div>
+											<div class="avatar" data-swiper-parallax="-50">
+												<img src="img/avatar.png" alt="avatar">
+											</div>
+										</div>
+										<div class="testimonial-slider-item swiper-slide">
+											<div class="testimonial-content">
+												<p class="text" data-swiper-parallax="-200">Nam liber tempor cum soluta nobis eleifend option congue
+													nihil imperdiet doming id quod mazim.
+												</p>
+												<a href="#" class="author" data-swiper-parallax="-150">Jonathan Simpson</a>
+												<a href="#" class="company" data-swiper-parallax="-150">Envato Market</a>
+
+											</div>
+											<div class="avatar" data-swiper-parallax="-50">
+												<img src="img/avatar.png" alt="avatar">
+											</div>
+										</div>
+									</div>
+									<!-- If we need pagination -->
+									<div class="swiper-pagination"></div>
+
+									<div class="quote">
+										<i class="seoicon-quotes"></i>
+									</div>
+								</div>
+
+								<div class="testimonial__thumb-img">
+									<img src="img/testimonial1.png" alt="image">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-
-			</div>
-
-			<div class="theme-module news-slider-module">
-				<div class="swiper-container top-pagination" data-show-items="3" data-scroll-items="3">
-
-					<!-- If we need pagination -->
-					<div class="swiper-pagination"></div>
-
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<article class="hentry post">
-
-								<time class="post__date published " datetime="2016-01-30 12:00:00">
-									January 30, 2016
-								</time>
-
-								<div class="post__content">
-									<h2 class="post__title entry-title">
-										<a href="15_blog_details.html">Qemonstraverunt legere lius</a>
-									</h2>
-
-									<p class="post__text">Sequitur mutationem consuetudium lectorum quam nunc putamus.</p>
-
-								</div>
-
-								<div class="post__author author vcard">
-									<div class="post-avatar">
-										<img src="img/post-author1.png" alt="author">
-									</div>
-									<span class="post__author-name fn"> Posted by <a href="#" class="post__author-link">Admin</a></span>
-								</div>
-
-							</article>
-						</div>
-
-						<div class="swiper-slide">
-							<article class="hentry post">
-
-								<time class="post__date published " datetime="2016-01-30 12:00:00">
-									January 30, 2016
-								</time>
-
-								<div class="post__content">
-									<h2 class="post__title entry-title">
-										<a href="15_blog_details.html">Qemonstraverunt legere lius</a>
-									</h2>
-
-									<p class="post__text">Sequitur mutationem consuetudium lectorum quam nunc putamus.</p>
-
-								</div>
-
-								<div class="post__author author vcard">
-									<div class="post-avatar">
-										<img src="img/post-author2.png" alt="author">
-									</div>
-									<span class="post__author-name fn"> Posted by <a href="#" class="post__author-link">Admin</a></span>
-								</div>
-
-							</article>
-						</div>
-
-						<div class="swiper-slide">
-							<article class="hentry post">
-
-								<time class="post__date published " datetime="2016-01-30 12:00:00">
-									January 30, 2016
-								</time>
-
-								<div class="post__content">
-									<h2 class="post__title entry-title">
-										<a href="15_blog_details.html">Qemonstraverunt legere lius</a>
-									</h2>
-
-									<p class="post__text">Sequitur mutationem consuetudium lectorum quam nunc putamus.</p>
-
-								</div>
-
-								<div class="post__author author vcard">
-									<div class="post-avatar">
-										<img src="img/post-author3.png" alt="author">
-									</div>
-									<span class="post__author-name fn"> Posted by <a href="#" class="post__author-link">Admin</a></span>
-								</div>
-
-							</article>
-						</div>
-
-						<div class="swiper-slide">
-							<article class="hentry post">
-
-								<time class="post__date published " datetime="2016-01-30 12:00:00">
-									January 30, 2016
-								</time>
-
-								<div class="post__content">
-									<h2 class="post__title entry-title">
-										<a href="15_blog_details.html">Qemonstraverunt legere lius</a>
-									</h2>
-
-									<p class="post__text">Sequitur mutationem consuetudium lectorum quam nunc putamus.</p>
-
-								</div>
-
-								<div class="post__author author vcard">
-									<div class="post-avatar">
-										<img src="img/post-author1.png" alt="author">
-									</div>
-									<span class="post__author-name fn"> Posted by <a href="#" class="post__author-link">Admin</a></span>
-								</div>
-
-							</article>
-						</div>
-
-						<div class="swiper-slide">
-							<article class="hentry post">
-
-								<time class="post__date published " datetime="2016-01-30 12:00:00">
-									January 30, 2016
-								</time>
-
-								<div class="post__content">
-									<h2 class="post__title entry-title">
-										<a href="15_blog_details.html">Qemonstraverunt legere lius</a>
-									</h2>
-
-									<p class="post__text">Sequitur mutationem consuetudium lectorum quam nunc putamus.</p>
-
-								</div>
-
-								<div class="post__author author vcard">
-									<div class="post-avatar">
-										<img src="img/post-author2.png" alt="author">
-									</div>
-									<span class="post__author-name fn"> Posted by <a href="#" class="post__author-link">Admin</a></span>
-								</div>
-
-							</article>
-						</div>
-
-						<div class="swiper-slide">
-							<article class="hentry post">
-
-								<time class="post__date published " datetime="2016-01-30 12:00:00">
-									January 30, 2016
-								</time>
-
-								<div class="post__content">
-									<h2 class="post__title entry-title">
-										<a href="15_blog_details.html">Qemonstraverunt legere lius</a>
-									</h2>
-
-									<p class="post__text">Sequitur mutationem consuetudium lectorum quam nunc putamus.</p>
-
-								</div>
-
-								<div class="post__author author vcard">
-									<div class="post-avatar">
-										<img src="img/post-author3.png" alt="author">
-									</div>
-									<span class="post__author-name fn"> Posted by <a href="#" class="post__author-link">Admin</a></span>
-								</div>
-
-							</article>
-						</div>
-
-						<div class="swiper-slide">
-							<article class="hentry post">
-
-								<time class="post__date published " datetime="2016-01-30 12:00:00">
-									January 30, 2016
-								</time>
-
-								<div class="post__content">
-									<h2 class="post__title entry-title">
-										<a href="15_blog_details.html">Qemonstraverunt legere lius</a>
-									</h2>
-
-									<p class="post__text">Sequitur mutationem consuetudium lectorum quam nunc putamus.</p>
-
-								</div>
-
-								<div class="post__author author vcard">
-									<div class="post-avatar">
-										<img src="img/post-author1.png" alt="author">
-									</div>
-									<span class="post__author-name fn"> Posted by <a href="#" class="post__author-link">Admin</a></span>
-								</div>
-
-							</article>
-						</div>
-
-						<div class="swiper-slide">
-							<article class="hentry post">
-
-								<time class="post__date published " datetime="2016-01-30 12:00:00">
-									January 30, 2016
-								</time>
-
-								<div class="post__content">
-									<h2 class="post__title entry-title">
-										<a href="15_blog_details.html">Qemonstraverunt legere lius</a>
-									</h2>
-
-									<p class="post__text">Sequitur mutationem consuetudium lectorum quam nunc putamus.</p>
-
-								</div>
-
-								<div class="post__author author vcard">
-									<div class="post-avatar">
-										<img src="img/post-author2.png" alt="author">
-									</div>
-									<span class="post__author-name fn"> Posted by <a href="#" class="post__author-link">Admin</a></span>
-								</div>
-
-							</article>
-						</div>
-
-					</div>
+				<div class="testimonial-img">
+					<img src="img/testimonial2.png" alt="image">
 				</div>
 			</div>
-
 		</div>
 	</div>
 
-	<!-- End Post-slider -->
+	<!-- End Testimonial-slider -->
 
+
+	<!-- Partners & Clients -->
+
+	<!-- Partners -->
+	<div class="container">
+    <div class="row">
+        <div class="background-mountains scrollme" style="padding:15px 0px">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                        <div class="heading align-center" style="margin-bottom:30px;">
+                            <h2 class=" heading-title" style="padding-top:30px;">Partners</h2>
+                            <div class="heading-line">
+                            <span class="short-line"></span>
+                            <span class="long-line"></span>
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+
+								<!-- Desktop parters -->
+                <div class="partner_slider_desktop">
+                    <div class="row">
+                            <div class="col-lg-2" style="text-align:center;">
+                                <img src="img/airtel.jpg">
+                            </div>
+                            <div class="col-lg-2" style="text-align:center;">
+                                <img src="img/netmagic.jpg">
+                            </div>
+                            <div class="col-lg-2" style="text-align:center;">
+                                <img src="img/juniper.jpg">
+                            </div>
+                            <div class="col-lg-2" style="text-align:center;">
+                                <img src="img/cisco.jpg">
+                            </div>
+                            <div class="col-lg-2" style="text-align:center;">
+                                <img src="img/maipu.jpg">
+                            </div>
+                            <div class="col-lg-2" style="text-align:center;">
+                                <img src="img/cambiumNetwork.jpg">
+                            </div>
+                            <div class="col-lg-offset-1  col-lg-2">
+                                <img src="img/log2space.jpg">
+                            </div>
+                            <div class="col-lg-2" style="text-align:center;">
+                                <img src="img/tatacomm.jpg">
+                            </div>
+                            <div class="col-lg-2" style="text-align:center;">
+                                <img src="img/google.jpg">
+                            </div>
+                            <div class="col-lg-2" style="text-align:center;">
+                                <img src="img/akamai.jpg">
+                            </div>
+                            <div class="col-lg-2" style="text-align:center;">
+                                <img src="img/microsoft.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+								<!-- mobile partners -->
+                <div class="partner_slider_mobile">
+                    <div class="row">
+
+											<div class="partner-class-new">
+									      <div><img src="img/log2space.jpg"></div>
+									      <div><img src="img/tatacomm.jpg"></div>
+									      <div><img src="img/google.jpg"></div>
+									      <div><img src="img/microsoft.jpg"></div>
+												<div><img src="img/netmagic.jpg"></div>
+												<div><img src="img/juniper.jpg"></div>
+												<div><img src="img/cisco.jpg"></div>
+												<div><img src="img/akamai.jpg"></div>
+									    </div>
+
+									    <script type="text/javascript">
+									      $(document).ready(function(){
+									        $('.partner-class-new').slick({
+
+									          dots: true,
+									            infinite: true,
+									            speed: 300,
+									            slidesToShow: 3,
+									            slidesToScroll: 1,
+															autoplay: true,
+															autoplaySpeed: 2000,
+									            responsive: [
+									              {
+									                breakpoint: 1024,
+									                settings: {
+									                  slidesToShow: 3,
+									                  slidesToScroll: 3,
+									                  infinite: true,
+									                  dots: true
+									                }
+									              },
+									              {
+									                breakpoint: 600,
+									                settings: {
+									                  slidesToShow: 2,
+									                  slidesToScroll: 2
+									                }
+									              },
+									              {
+									                breakpoint: 480,
+									                settings: {
+									                  slidesToShow: 1,
+									                  slidesToScroll: 1
+									                }
+									              }
+									            ]
+
+									        });
+									      });
+									    </script>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+  </div>
+	<hr>
 
 	<!-- Clients -->
 
-	<div class="section">
-		<div class="client-carousel medium-padding120">
-			<div class="container">
+	<div class="row">
+	   <div class="background-mountains scrollme" style="padding:15px 0px;">
+	      <div class="container-fluid">
+	         <div class="row">
+	            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+	               <div class="heading align-center" style="margin-bottom:30px;">
+	                  <h2 class=" heading-title" style="padding-top:30px;">Our Valuable Clients</h2>
+	                  <div class="heading-line">
+	                     <span class="short-line"></span>
+	                     <span class="long-line"></span>
+	                  </div>
+	               </div>
+	            </div>
+	         </div>
+
 				<div class="row">
-					<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
-						<div class="heading align-center">
-							<h4 class="h1 heading-title">Our Valuable Clients</h4>
-							<div class="heading-line">
-								<span class="short-line"></span>
-								<span class="long-line"></span>
-							</div>
-							<p class="heading-text">Qui mutationem consuetudium. </p>
-						</div>
+					<div class="client-slider-new">
+						<div><img src="img/log2space.jpg"></div>
+						<div><img src="img/tatacomm.jpg"></div>
+						<div><img src="img/google.jpg"></div>
+						<div><img src="img/microsoft.jpg"></div>
+						<div><img src="img/netmagic.jpg"></div>
+						<div><img src="img/juniper.jpg"></div>
+						<div><img src="img/cisco.jpg"></div>
+						<div><img src="img/akamai.jpg"></div>
 					</div>
-				</div>
 
-				<div class="theme-module clients-slider-module">
+					<script type="text/javascript">
+						$(document).ready(function(){
+							$('.client-slider-new').slick({
 
-					<div class="swiper-container pagination-bottom" data-show-items="4">
+								dots: true,
+									infinite: true,
+									speed: 300,
+									slidesToShow: 5,
+									slidesToScroll: 1,
+									autoplay: true,
+									autoplaySpeed: 2000,
+									responsive: [
+										{
+											breakpoint: 1024,
+											settings: {
+												slidesToShow: 3,
+												slidesToScroll: 3,
+												infinite: true,
+												dots: true
+											}
+										},
+										{
+											breakpoint: 600,
+											settings: {
+												slidesToShow: 2,
+												slidesToScroll: 2
+											}
+										},
+										{
+											breakpoint: 480,
+											settings: {
+												slidesToShow: 1,
+												slidesToScroll: 1
+											}
+										}
+									]
 
-						<div class="swiper-wrapper">
-
-							<div class="swiper-slide client-item">
-								<a href="09_our_clients.html" class="client-image">
-									<img src="img/client1-hover.png" alt="logo" class="hover">
-								</a>
-							</div>
-
-							<div class="swiper-slide client-item">
-								<a href="09_our_clients.html" class="client-image">
-									<img src="img/client2-hover.png" alt="logo" class="hover">
-								</a>
-							</div>
-
-							<div class="swiper-slide client-item">
-								<a href="09_our_clients.html" class="client-image">
-									<img src="img/client3-hover.png" alt="logo" class="hover">
-								</a>
-							</div>
-
-							<div class="swiper-slide client-item">
-								<a href="09_our_clients.html" class="client-image">
-									<img src="img/client4-hover.png" alt="logo" class="hover">
-								</a>
-							</div>
-
-						</div>
-
-						<!--Prev Next Arrows-->
-						<svg class="btn-next">
-							<use xlink:href="#arrow-right"></use>
-						</svg>
-
-						<svg class="btn-prev">
-							<use xlink:href="#arrow-left"></use>
-						</svg>
-					</div>
+							});
+						});
+					</script>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<!-- End Clients -->
+	<br>
+	<!-- End of Partners & Clients -->
 
 </div>
 
@@ -1705,8 +1518,6 @@
 
 
 <!-- JS Script -->
-
-<script src="js/jquery-3.4.1.js"></script>
 
 <script src="js/js-plugins/crum-mega-menu.js"></script>
 <script src="js/js-plugins/swiper.jquery.min.js"></script>
