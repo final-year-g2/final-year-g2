@@ -113,27 +113,27 @@
 					</li>
 
 					<li class="">
-						<a href="services.html">Services</a>
+						<a href="#">Services</a>
 						<ul class="dropdown">
 							<li class="megamenu-item-info">
 								<h5 class="megamenu-item-info-title">List of Services</h5>
 								<p class="megamenu-item-info-text">Choose a Service</p>
 							</li>
 							<li class="hover-ver2">
-								<a href="05_service_details_localseo.html">Broadband Plans</a>
+								<a href="Broadband.html">Broadband Plans</a>
 							</li>
 							<li class="hover-ver2">
-								<a href="07_service_email_marketing.html">
+								<a href="Leased_Lines.html">
 									Lease line Plans
 								</a>
 							</li>
 							<li class="menu-item-has-children hover-ver2">
-								<a href="04_service_detail_seo.html">
+								<a href="Campus_Wifi.html">
 									Campus Wi-Fi Solutions
 								</a>
 							</li>
 							<li class="hover-ver2">
-								<a href="08_service_ppc_management.html">
+								<a href="Network_Infrastructure.html">
 									Network Infrastructure Setup & Maintenance
 								</a>
 							</li>
@@ -224,10 +224,10 @@
 									<div class="nice-select" tabindex="0" style="background-color:#4cc2c0; color:#fff">
 										<span class="current">1 Month</span>
 										<ul class="list">
-											<li data-value="1" class="option" style="color:black;padding:0px" onclick="select_plan()">1 Month</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="select_plan()">3 Months</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="select_plan()">5 Months + 1*</li>
-											<li data-value="15" class="option selected focus" style="color:black;padding:0px">10 Months + 2*</li>
+											<li data-value="1" class="option" style="color:black;padding:0px" onclick="change_month(1)">1 Month</li>
+											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_month(3)">3 Months</li>
+											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_month(5)">5 Months + 1*</li>
+											<li data-value="15" class="option selected focus" style="color:black;padding:0px" onclick="change_month(10)">10 Months + 2*</li>
 										</ul>
 									</div>
 							</div>
@@ -275,29 +275,37 @@
 						<div class="pricing-tables-wrap" style="text-align:center;">
 							<br><br>
 
-							<table class="table table-bordered table-striped table-hover" style="width:60%;margin: 0 auto;">
+							<table class="table table-bordered table-striped table-hover" style="width:80%;margin: 0 auto;">
 							  <thead>
-							    <tr>
-							      <th scope="col" style="text-align:center;">Bandwidth</th>
-							      <th scope="col" style="text-align:center;">Speed after FUP</th>
-							      <th scope="col" style="text-align:center;">Price</th>
+									<tr>
+										<th scope="col" style="text-align:center;color:black">Validity</th>
+										<th scope="col" style="text-align:center;color:black">High Speed</th>
+										<th scope="col" style="text-align:center;color:black">High Speed Data Limit</th>
+							      <th scope="col" style="text-align:center;color:black">Speed after FUP</th>
+							      <th scope="col" style="text-align:center;color:black">Price</th>
 							    </tr>
 							  </thead>
 							  <tbody id="price_table">
 							    <tr>
-							      <td>Unlimited</td>
+							      <td class="month_column">1 Month</td>
+										<td>3 Mbps</td>
+										<td>50 GB</td>
 							      <td>1 Mbps</td>
-							      <td>200</td>
+							      <td style="color:black">200</td>
 							    </tr>
 							    <tr>
-							      <td>Unlimited</td>
+							      <td class="month_column">1 Month</td>
+										<td>3 Mbps</td>
+										<td>50 GB</td>
 							      <td>2 Mbps</td>
-							      <td>400</td>
+							      <td style="color:black">400</td>
 							    </tr>
 							    <tr>
-							      <td>Unlimited</td>
+							      <td class="month_column">1 Month</td>
+										<td>3 Mbps</td>
+										<td>50 GB</td>
 							      <td>5 Mbps</td>
-							      <td>600</td>
+							      <td style="color:black">600</td>
 							    </tr>
 							  </tbody>
 							</table>

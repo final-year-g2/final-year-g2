@@ -5,9 +5,20 @@ String.prototype.format = function () {
   });
 };
 
+// Month
+function change_month(months){
+  var table = document.getElementsByClassName("month_column");
+  var i=0;
 
-// $(document).on('click.nice_select', '.nice-select .option:not(.disabled)', function(event) {
-  function select_plan(){
+  if(months==5){months = "5 + 1*"}
+  if(months==10){months = "10 + 2*"}
+  while(i<table.length){
+      table[i].innerHTML = "{} Months".format(months)
+      i+=1;
+    }
+}
+
+function select_plan(){
 
   var table = document.getElementById("price_table");
   // console.log(table.innerHTML);
