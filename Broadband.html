@@ -30,6 +30,14 @@
 	<!--External fonts-->
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
+	<style media="screen">
+		.active_row{
+			 background-color: #b8daff !important;
+			 color:#0c5460
+		}
+	</style>
+
+
 	<script type="text/javascript">
 
 			window.onclick = e => {
@@ -48,6 +56,27 @@
 
 	</script>
 
+	<!-- Firebase -->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyCPneO4tHlcLE1o19sqzFPyryDb2MmlXo4",
+			authDomain: "zopens-network.firebaseapp.com",
+			databaseURL: "https://zopens-network.firebaseio.com",
+			projectId: "zopens-network",
+			storageBucket: "zopens-network.appspot.com",
+			messagingSenderId: "291704072534",
+			appId: "1:291704072534:web:e5e335d2d00ec918090ef7"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+	</script>
+
+	<script src="Firebase/firebase.js"></script>
 </head>
 
 
@@ -68,9 +97,9 @@
 			</div>
 		</div>
 
-		<div class="login-block">
+		<div class="login-block" id="login_block">
 			<img src="img/signin_color.png" class="sign-in">
-			<a href="login.html" target="_blank">Log In / Sign up</a>
+			<a href="login.html" target="_blank" onMouseOver="this.style.color='#FFF'" onMouseOut="this.style.color='#000'" id="login_button">Log In / Sign up</a>
 		</div>
 
 		<a href="#" class="top-bar-close" id="top-bar-close-js">
@@ -239,8 +268,8 @@
 										<ul class="list">
 											<li data-value="1" class="option" style="color:black;padding:0px" onclick="change_month(1)">1 Month</li>
 											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_month(3)">3 Months</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_month(5)">5 Months + 1*</li>
-											<li data-value="15" class="option selected focus" style="color:black;padding:0px" onclick="change_month(10)">10 Months + 2*</li>
+											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_month(5)">5 Months</li>
+											<li data-value="15" class="option selected focus" style="color:black;padding:0px" onclick="change_month(10)">10 Months</li>
 										</ul>
 									</div>
 							</div>
@@ -250,15 +279,15 @@
 							</div>
 							<div class="col-lg-2" id="chooseCityMain">
 									<div class="nice-select" tabindex="0" style="background-color:#e43c00; color:#fff">
-										<span class="current">3 Mbps</span>
+										<span class="current">10 Mbps</span>
 										<ul class="list">
-											<li data-value="1" class="option" style="color:black;padding:0px" onclick="select_plan()">3 Mbps</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="select_plan()">5 Mbps</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="select_plan()">10 Mbps</li>
-											<li data-value="1" class="option" style="color:black;padding:0px" onclick="select_plan()">20 Mbps</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="select_plan()">25 Mbps</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="select_plan()">50 Mbps</li>
-											<li data-value="15" class="option selected focus" style="color:black;padding:0px" onclick="select_plan()">100 Mbps</li>
+											<li data-value="1" class="option" style="color:black;padding:0px" onclick="change_speed(0)">3 Mbps</li>
+											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_speed(1)">5 Mbps</li>
+											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_speed(2)">10 Mbps</li>
+											<li data-value="1" class="option" style="color:black;padding:0px" onclick="change_speed(3)">20 Mbps</li>
+											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_speed(4)">25 Mbps</li>
+											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_speed(5)">50 Mbps</li>
+											<li data-value="15" class="option selected focus" style="color:black;padding:0px" onclick="change_speed(6)">100 Mbps</li>
 										</ul>
 									</div>
 							</div>
@@ -271,13 +300,13 @@
 									<div class="nice-select" tabindex="0" style="background-color:#fcb03b; color:#fff">
 										<span class="current">50 GB</span>
 										<ul class="list">
-											<li data-value="1" class="option" style="color:black">50 GB</li>
-											<li data-value="9" class="option" style="color:black">100 GB</li>
-											<li data-value="9" class="option" style="color:black">200 GB</li>
-											<li data-value="1" class="option" style="color:black">300 GB</li>
-											<li data-value="9" class="option" style="color:black">400 GB</li>
-											<li data-value="9" class="option" style="color:black">500 GB</li>
-											<li data-value="15" class="option selected focus" style="color:black">1 TB</li>
+											<li data-value="1" class="option" style="color:black" onclick="change_limit(50)">50 GB</li>
+											<li data-value="9" class="option" style="color:black" onclick="change_limit(100)">100 GB</li>
+											<li data-value="9" class="option" style="color:black" onclick="change_limit(200)">200 GB</li>
+											<li data-value="1" class="option" style="color:black" onclick="change_limit(300)">300 GB</li>
+											<li data-value="9" class="option" style="color:black" onclick="change_limit(400)">400 GB</li>
+											<li data-value="9" class="option" style="color:black" onclick="change_limit(500)">500 GB</li>
+											<li data-value="15" class="option selected focus" style="color:black" onclick="change_limit(1)">1 TB</li>
 										</ul>
 									</div>
 							</div>
@@ -290,46 +319,81 @@
 
 							<table class="table table-bordered table-striped table-hover" style="width:80%;margin: 0 auto;">
 							  <thead>
-									<tr>
-										<th scope="col" style="text-align:center;color:black">Validity</th>
-										<th scope="col" style="text-align:center;color:black">High Speed</th>
-										<th scope="col" style="text-align:center;color:black">High Speed Data Limit</th>
-							      <th scope="col" style="text-align:center;color:black">Speed after FUP</th>
-							      <th scope="col" style="text-align:center;color:black">Price</th>
+									<tr style="background-color: #343a40;color:#fff">
+										<th scope="col" style="text-align:center;">Validity</th>
+										<th scope="col" style="text-align:center;">High Speed</th>
+										<th scope="col" style="text-align:center;">High Speed Data Limit</th>
+							      <th scope="col" style="text-align:center;">Speed after FUP</th>
+							      <th scope="col" style="text-align:center;">Price **</th>
 							    </tr>
 							  </thead>
 							  <tbody id="price_table">
-							    <tr>
+							    <tr id="r0">
 							      <td class="month_column">1 Month</td>
-										<td>3 Mbps</td>
-										<td>50 GB</td>
+										<td style="">3 Mbps</td>
+										<td class="datalimit_column">50 GB</td>
 							      <td>1 Mbps</td>
-							      <td style="color:black">200</td>
+							      <td style="color:black" id="price_0">₹ 700</td>
 							    </tr>
-							    <tr>
+							    <tr id="r1">
 							      <td class="month_column">1 Month</td>
-										<td>3 Mbps</td>
-										<td>50 GB</td>
+										<td>5 Mbps</td>
+										<td class="datalimit_column">50 GB</td>
 							      <td>2 Mbps</td>
-							      <td style="color:black">400</td>
+							      <td style="color:black" id="price_1">₹ 900</td>
 							    </tr>
-							    <tr>
+							    <tr id="r2" class="active_row">
 							      <td class="month_column">1 Month</td>
-										<td>3 Mbps</td>
-										<td>50 GB</td>
+										<td>10 Mbps</td>
+										<td class="datalimit_column">50 GB</td>
 							      <td>5 Mbps</td>
-							      <td style="color:black">600</td>
+							      <td style="color:black"  id="price_2">₹ 1200</td>
+							    </tr>
+									<tr id="r3">
+							      <td class="month_column">1 Month</td>
+										<td>20 Mbps</td>
+										<td class="datalimit_column">50 GB</td>
+							      <td>10 Mbps</td>
+							      <td style="color:black" id="price_3">₹ 1900</td>
+							    </tr>
+							    <tr id="r4">
+							      <td class="month_column">1 Month</td>
+										<td>25 Mbps</td>
+										<td class="datalimit_column">50 GB</td>
+							      <td>15 Mbps</td>
+							      <td style="color:black" id="price_4">₹ 2250</td>
+							    </tr>
+							    <tr id="r5">
+							      <td class="month_column">1 Month</td>
+										<td>50 Mbps</td>
+										<td class="datalimit_column">50 GB</td>
+							      <td>25 Mbps</td>
+							      <td style="color:black" id="price_5">₹ 2800</td>
+							    </tr>
+									<tr id="r6">
+							      <td class="month_column">1 Month</td>
+										<td>100 Mbps</td>
+										<td class="datalimit_column">50 GB</td>
+							      <td>50 Mbps</td>
+							      <td style="color:black" id="price_6">₹ 4200</td>
 							    </tr>
 							  </tbody>
 							</table>
 
-							<h4 style="margin-top:50px">Your Final Price after GST would be <span>$ 500</span></h4>
+							<h5 style="margin-top:30px">Your Final Price after GST would be <span style="color:#00adef">₹ </span><span id="final_price" style="color:#00adef">1,416</span></h5>
 							<br>
 						</div>
 					</div>
 
+					<div class="heading-line" style=" margin-top:40px;">
+						<div style="color:black;width:100%;text-align:center;">
+								<h5><span style="color:#ed1c24">Terms &amp; Conditions:</span></h5>
+								<br>
+								<span>Plans rates will remain same irrespective of  any area or location all over Maharashtra. All prices are excluding  GST. <br> Call <span style="color:#ed1c24">+91 7620627788</span> for more offers and discounts.</span>
+						</div>
+					</div>
 
-				<div style="text-align:center; margin-top:40px;">
+				<div style="text-align:center;margin-top: 30px; margin-bottom: -70px">
 						<a href="#" class="btn btn-medium btn--green">
 							<span class="text">Download PDF Brochure</span>
 							<span class="semicircle"></span>
@@ -339,15 +403,6 @@
 							<span class="semicircle"></span>
 						</a>
 				</div>
-
-				<div class="heading-line" style="margin-top: 30px; margin-bottom: -30px">
-					<div style="color:black;width:100%;text-align:center;">
-							<h5><span style="color:#ed1c24">Terms &amp; Conditions:</span></h5>
-							<br>
-							<span>Plans rates will remain same irrespective of  any area or location all over Maharashtra. All prices are excluding  GST. <br> Call <span style="color:#ed1c24">+91 7620627788</span> for more offers and discounts.</span>
-					</div>
-				</div>
-
 
 				</div>
 			</div>
@@ -564,19 +619,19 @@
 						<ul class="list list--primary">
 							<li>
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Broadband Connection</a>
+								<a href="Broadband.html">Broadband Connection</a>
 							</li>
 							<li>
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Leased Lines</a>
+								<a href="Leased_Lines.html">Leased Lines</a>
 							</li>
 							<li>
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Campus wifi Solutions</a>
+								<a href="Campus_Wifi.html">Campus wifi Solutions</a>
 							</li>
 							<li>
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Network Infrastructure & Maintenance</a>
+								<a href="Network_Infrastructure.html">Network Infrastructure & Maintenance</a>
 							</li>
 						</ul>
 					</div>
@@ -617,7 +672,7 @@
 							<svg enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="  38.7,36.4 56,32 38.7,27.6 42,22 36.4,25.3 32,8 27.6,25.3 22,22 25.3,27.6 8,32 25.3,36.4 22,42 27.6,38.7 32,56 36.4,38.7 42,42   " stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></polygon><circle cx="32" cy="32" fill="none" r="4" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></circle><path d="  M26.1,53.2c-7.9-2.2-13.9-8.6-15.6-16.7" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path><path d="  M53.5,36.9c-1.8,8.1-8.2,14.6-16.3,16.5" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path><path d="  M36.9,10.5c8.2,1.9,14.7,8.3,16.6,16.6" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path><path d="  M10.5,27.1c1.9-8.2,8.3-14.6,16.4-16.5" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path></svg>
 						</div>
 						<div class="content">
-							<a href="#" class="title">Jalgaon</a>
+							<a href="#" class="title">Service Area</a>
 							<p class="sub-title">Maharashtra</p>
 						</div>
 					</div>

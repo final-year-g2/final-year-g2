@@ -4,7 +4,7 @@
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Zopens Network - Internet Service Provider</title>
+	<title>ZOPENS Network - Internet Service Provider</title>
 	<link rel="icon" href="img/logo.png" type="image/png">
 
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
@@ -50,6 +50,29 @@
 			}
 
 	</script>
+
+	<!-- Firebase -->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyCPneO4tHlcLE1o19sqzFPyryDb2MmlXo4",
+			authDomain: "zopens-network.firebaseapp.com",
+			databaseURL: "https://zopens-network.firebaseio.com",
+			projectId: "zopens-network",
+			storageBucket: "zopens-network.appspot.com",
+			messagingSenderId: "291704072534",
+			appId: "1:291704072534:web:e5e335d2d00ec918090ef7"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+	</script>
+
+	<script src="Firebase/firebase.js"></script>
 </head>
 
 
@@ -69,9 +92,9 @@
 			</div>
 		</div>
 
-		<div class="login-block">
+		<div class="login-block" id="login_block">
 			<img src="img/signin_color.png" class="sign-in">
-			<a href="login.html" target="_blank">Log In / Sign up</a>
+			<a href="login.html" target="_blank" onMouseOver="this.style.color='#FFF'" onMouseOut="this.style.color='#000'" id="login_button">Log In / Sign up</a>
 		</div>
 
 		<a href="#" class="top-bar-close" id="top-bar-close-js">
@@ -228,7 +251,7 @@
 
 					<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 						<div class="h5 c-gray">
-							We Zopens Network services private Limited are always in a
+							We ZOPENS Network services private Limited are always in a
 							position to provide the best services to our customers&#39; weather it
 							may be Home, banks, corporate offices, and industries because we
 							believe our work is worship and for that customer support is
@@ -237,10 +260,12 @@
 							matter what the time or situation is.
 						</div>
 
+						<a href="contact.html">
 						<div class="btn btn-medium btn--blue btn-hover-shadow mt60">
 							<span class="text">Tell Us About Your Issues</span>
 							<span class="semicircle"></span>
 						</div>
+						</a>
 
 					</div>
 
@@ -319,15 +344,15 @@
 
 				<div class="row">
 					<div class="col-lg-3 col-lg-offset-3 col-md-4 col-md-offset-2 col-sm-6 col-xs-12">
-						<a href="22_contacts.html" class="btn btn-medium btn--light-green btn-hover-shadow mb30">
+						<a href="contact.html" class="btn btn-medium btn--light-green btn-hover-shadow mb30">
 							<span class="text">New Connection</span>
 							<span class="semicircle"></span>
 						</a>
 					</div>
 
 					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<a href="22_contacts.html" class="btn btn-medium btn--dark btn-hover-shadow mb30">
-							<span class="text">Request a Free Demo</span>
+						<a href="#" class="btn btn-medium btn--dark btn-hover-shadow mb30">
+							<span class="text">Server Speed Demo</span>
 							<span class="semicircle"></span>
 						</a>
 					</div>
@@ -354,9 +379,10 @@
 								<span class="long-line"></span>
 							</div>
 
-							<p class="mb30">Mirum est notare quam littera gothica, quam nunc putamus parum claram,
-								anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.
-								Eodem modo typi, qui nunc nobis videntur parum clari, sollemnes in futurum.
+							<p class="mb30">ZOPENS Network Services Private Limited are best known for their service and
+									quick communication. We have very less response time for all required
+									services and the setup time is also very less. Our management team is very keen about their work and they know how to accomplish more in a shorter
+									period of time.
 							</p>
 
 						</div>
@@ -364,49 +390,50 @@
 
 					<div class="col-lg-7 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
 						<div class="skills">
+
 							<div class="skills-item">
 								<div class="skills-item-info">
-									<span class="skills-item-title">Communication Skills</span>
-									<span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="50" data-to="62" data-from="0"></span><span class="units">%</span></span>
+									<span class="skills-item-title">Time for new setup</span>
+									<span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="50" data-to="5" data-from="0"></span><span class="units">hours</span></span>
 								</div>
+
 								<div class="skills-item-meter">
-                                <span class="skills-item-meter-active bg-orange-color border-orange-color" style="width: 62%">
-                                </span>
+																<span class="skills-item-meter-active bg-secondary-color border-secondary-color" style="width: 15%">
+																</span>
 								</div>
 							</div>
 
 							<div class="skills-item">
 								<div class="skills-item-info">
 									<span class="skills-item-title">Time to Respond</span>
-									<span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="50" data-to="86" data-from="0"></span><span class="units">%</span></span>
+									<span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="50" data-to="2" data-from="0"></span><span class="units"> hours</span></span>
 								</div>
 
 								<div class="skills-item-meter">
-                                <span class="skills-item-meter-active bg-green-color border-green-color" style="width: 86%">
+                                <span class="skills-item-meter-active bg-green-color border-green-color" style="width: 5%">
                                 </span>
 								</div>
 							</div>
 
 							<div class="skills-item">
 								<div class="skills-item-info">
-									<span class="skills-item-title">Time for new setup</span>
-									<span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="50" data-to="52" data-from="0"></span><span class="units">%</span></span>
+									<span class="skills-item-title">Communication Skills</span>
+									<span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="50" data-to="92" data-from="0"></span><span class="units">%</span></span>
 								</div>
-
 								<div class="skills-item-meter">
-                                <span class="skills-item-meter-active bg-secondary-color border-secondary-color" style="width: 52%">
+                                <span class="skills-item-meter-active bg-orange-color border-orange-color" style="width: 92%">
                                 </span>
 								</div>
 							</div>
 
 							<div class="skills-item">
 								<div class="skills-item-info">
-									<span class="skills-item-title">Reputation Management</span>
-									<span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="50" data-to="40" data-from="0"></span><span class="units">%</span></span>
+									<span class="skills-item-title">Infrastructure Management</span>
+									<span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="50" data-to="98" data-from="0"></span><span class="units">%</span></span>
 								</div>
 
 								<div class="skills-item-meter">
-                                <span class="skills-item-meter-active bg-primary-color border-primary-color" style="width: 40%">
+                                <span class="skills-item-meter-active bg-primary-color border-primary-color" style="width: 98%">
                                 </span>
 								</div>
 							</div>
@@ -493,7 +520,7 @@
 								<div id="collapseThree" class="panel-collapse collapse" aria-labelledby="headingThree" data-parent="#accordion">
 									<div class="card-body">
 										<div class="panel-info">
-											You can check the speed of your Zopens Network services private Limited Secured Wireless Broadband service by logging through http://www.speedtest.net
+											You can check the speed of your ZOPENS Network services private Limited Secured Wireless Broadband service by logging through http://www.speedtest.net
 										</div>
 									</div>
 								</div>
@@ -534,7 +561,7 @@
 										<span class="icon">
 											<i class="fa fa-angle-right" aria-hidden="true"></i>
 										</span>
-										<span class="title">What are the advantages of Zopens Network services over other services providers?</span>
+										<span class="title">What are the advantages of ZOPENS Network services over other services providers?</span>
 									</button>
 
 								</div>
@@ -542,7 +569,7 @@
 								<div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 									<div class="card-body">
 										<div class="panel-info">
-											Zopens Network services private Limited comes with many advantages:<br>
+											ZOPENS Network services private limited comes with many advantages:<br>
 											1) Bill Limit Guarantee <br>
 											2) Up to 100 Mbps of surfing Speed <br>
 											3) On-Call Tech Support <br>
@@ -559,7 +586,7 @@
 										<span class="icon">
 											<i class="fa fa-angle-right" aria-hidden="true"></i>
 										</span>
-										<span class="title">How can I pay the bill for Zopens Network services?</span>
+										<span class="title">How can I pay the bill for ZOPENS Network services?</span>
 									</button>
 
 								</div>
@@ -586,7 +613,7 @@
 	<!-- End Testimonials Slider -->
 
 	<!-- Contact Form -->
-	<div class="container">
+	<div class="container" style="display:none">
 		<div class="row pt120">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="heading">
@@ -656,6 +683,57 @@
 	</div>
 	<!-- End Contact Form -->
 
+	<!-- Subscribe Form -->
+
+	<div class="container-fluid bg-green-color" style="margin-top:-60px">
+	            <div class="row">
+	                <div class="container-fluid" style="margin:0 25px;">
+
+	                    <div class="row">
+
+	                        <div class="subscribe scrollme">
+
+	                            <div class="col-lg-7 col-lg-offset-4 col-md-7 col-md-offset-4 col-sm-12 col-xs-12" style="text-align:center;">
+	                                <h4 class="subscribe-title">
+	                                Quick Connect For New Connection
+	                                </h4>
+	                                <form id="contact_form" class="subscribe-form" method="post" action="send_mail.php">
+	                                <div class="row">
+	                                <div class="col-lg-4">
+	                                <input class=" input-standard-grey input-white" name="name" required="required" placeholder="Your Name" type="text">
+	                                        </div>
+	                                <div class="col-lg-4">
+	                                <input class=" input-standard-grey input-white" name="phone" required="required" placeholder="Phone" type="text">
+	                                        </div>
+	                                <div class="col-lg-4">
+	                                <input class=" input-standard-grey input-white" name="location" required="required" placeholder="Location" type="text">
+	                                        </div>
+	                                </div>
+
+	                                <input style="display:none;" class="input-standard-grey input-white" name="email" value="anonymous@wnet.net.in" type="text">
+
+	                                    <button class="btn btn--dark submit-width">
+	                                        Submit
+	                                        <span class="semicircle--right"></span>
+	                                    </button>
+	                                </form>
+	                                <!-- <div class="sub-title">Sign up for new Seosignt content, updates, surveys & offers.</div> -->
+
+	                            </div>
+
+	                            <div class="images-block">
+	                                <img src="img/subscr-gear.png" alt="gear" class="gear" style="opacity: 1; transform: rotateZ(360deg);">
+	                                <img src="img/subscr1.png" alt="mail" class="mail" style="opacity: 1; bottom: 0px;">
+	                                <img src="img/subscr-mailopen.png" alt="mail" class="mail-2" style="opacity: 1; right: 20px;">
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+
+	<!-- End Subscribe Form -->
+
 
 </div>
 
@@ -711,19 +789,19 @@
 						<ul class="list list--primary">
 							<li>
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Broadband Connection</a>
+								<a href="Broadband.html">Broadband Connection</a>
 							</li>
 							<li>
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Leased Lines</a>
+								<a href="Leased_Lines.html">Leased Lines</a>
 							</li>
 							<li>
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Campus wifi Solutions</a>
+								<a href="Campus_Wifi.html">Campus wifi Solutions</a>
 							</li>
 							<li>
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Network Infrastructure & Maintenance</a>
+								<a href="Network_Infrastructure.html">Network Infrastructure & Maintenance</a>
 							</li>
 						</ul>
 					</div>

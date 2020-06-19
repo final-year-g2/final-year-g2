@@ -27,13 +27,51 @@
 	<link rel="stylesheet" type="text/css" href="css/primary-menu.css">
 	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
 
-	<!--Styles for RTL-->
-
-	<!--<link rel="stylesheet" type="text/css" href="css/rtl.css">-->
-
 	<!--External fonts-->
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
+	<!-- Firebase -->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+
+	<script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyCPneO4tHlcLE1o19sqzFPyryDb2MmlXo4",
+	    authDomain: "zopens-network.firebaseapp.com",
+	    databaseURL: "https://zopens-network.firebaseio.com",
+	    projectId: "zopens-network",
+	    storageBucket: "zopens-network.appspot.com",
+	    messagingSenderId: "291704072534",
+	    appId: "1:291704072534:web:e5e335d2d00ec918090ef7"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	</script>
+
+	<script type="text/javascript">
+
+		itemcode = window.location.search.split("?")[1];
+		firebase.database().ref('/Products/'+itemcode).once('value').then(function(snapshot) {
+		  var data = snapshot.val()
+		  console.log(data);
+			// function after data is loaded
+			Brand = data["Brand"];
+			Description = data["Description"];
+			Name = data["Name"];
+			Price = data["Price"];
+			Qty = data["Qty"];
+
+			document.getElementById("Brand").innerHTML = Brand;
+			document.getElementById("Price").innerHTML = "₹" + Price;
+			document.getElementById("Name").innerHTML = Name;
+			document.getElementById("Description").innerHTML = Description;
+			document.getElementById("Qty").innerHTML = Qty;
+		});
+
+	</script>
 
 </head>
 
@@ -238,8 +276,8 @@
 
 				<div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-12 col-xs-offset-0">
 					<div class="product-details-info">
-						<h3 class="product-details-info-title">DLink Router Single Antenna</h3>
-						<div class="product-details-info-price">₹ 999</div>
+						<h3 class="product-details-info-title" id="Name">Item Name Loading...</h3>
+						<div class="product-details-info-price" id="Price">Price Loading...</div>
 						<div class="product-details-info-ratings">
 							<div class="ratings">
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -248,11 +286,9 @@
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star-o" aria-hidden="true"></i>
 							</div>
-							<a href="#" class="reviews">Quantity Left: 25</a>
+							<a href="#" class="reviews">Quantity Left:</a> <a href="#" class="reviews" id="Qty"></a>
 						</div>
-						<p class="product-details-info-text" style="color:black">Qolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-							nibham liber tempor cum soluta nobis eleifend option congue nihil uarta decima et quinta.
-							Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.
+						<p class="product-details-info-text" style="color:black" id="Description">Loading Description...
 						</p>
 
 						<div class="quantity">
@@ -270,15 +306,8 @@
 
 					<div class="product-details-add-info">
 						<div class="author">Brand:
-							<a href="#" class="author-name">DLink</a>
+							<a href="#" class="author-name" id="Brand">Loading...</a>
 						</div>
-						<div class="tags">Tags:
-							<a class="tags-item" href="#">Router,</a>
-							<a class="tags-item" href="#">Dlink,</a>
-							<a class="tags-item" href="#">Wifi,</a>
-							<a class="tags-item" href="#">Home products</a>
-						</div>
-
 					</div>
 				</div>
 			</div>

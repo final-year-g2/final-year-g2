@@ -50,6 +50,27 @@
 
 	</script>
 
+	<!-- Firebase -->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyCPneO4tHlcLE1o19sqzFPyryDb2MmlXo4",
+			authDomain: "zopens-network.firebaseapp.com",
+			databaseURL: "https://zopens-network.firebaseio.com",
+			projectId: "zopens-network",
+			storageBucket: "zopens-network.appspot.com",
+			messagingSenderId: "291704072534",
+			appId: "1:291704072534:web:e5e335d2d00ec918090ef7"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+	</script>
+
+	<script src="Firebase/firebase.js"></script>
 </head>
 
 
@@ -70,9 +91,9 @@
 			</div>
 		</div>
 
-		<div class="login-block">
+		<div class="login-block" id="login_block">
 			<img src="img/signin_color.png" class="sign-in">
-			<a href="login.html" target="_blank">Log In / Sign up</a>
+			<a href="login.html" target="_blank" onMouseOver="this.style.color='#FFF'" onMouseOut="this.style.color='#000'" id="login_button">Log In / Sign up</a>
 		</div>
 
 		<a href="#" class="top-bar-close" id="top-bar-close-js">
@@ -546,19 +567,19 @@
 						<ul class="list list--primary">
 							<li>
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Broadband Connection</a>
+								<a href="Broadband.html">Broadband Connection</a>
 							</li>
 							<li>
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Leased Lines</a>
+								<a href="Leased_Lines.html">Leased Lines</a>
 							</li>
 							<li>
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Campus wifi Solutions</a>
+								<a href="Campus_Wifi.html">Campus wifi Solutions</a>
 							</li>
 							<li>
 								<i class="fa fa-caret-right" aria-hidden="true"></i>
-								<a href="#">Network Infrastructure & Maintenance</a>
+								<a href="Network_Infrastructure.html">Network Infrastructure & Maintenance</a>
 							</li>
 						</ul>
 					</div>
@@ -599,7 +620,7 @@
 							<svg enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="  38.7,36.4 56,32 38.7,27.6 42,22 36.4,25.3 32,8 27.6,25.3 22,22 25.3,27.6 8,32 25.3,36.4 22,42 27.6,38.7 32,56 36.4,38.7 42,42   " stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></polygon><circle cx="32" cy="32" fill="none" r="4" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></circle><path d="  M26.1,53.2c-7.9-2.2-13.9-8.6-15.6-16.7" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path><path d="  M53.5,36.9c-1.8,8.1-8.2,14.6-16.3,16.5" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path><path d="  M36.9,10.5c8.2,1.9,14.7,8.3,16.6,16.6" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path><path d="  M10.5,27.1c1.9-8.2,8.3-14.6,16.4-16.5" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path></svg>
 						</div>
 						<div class="content">
-							<a href="#" class="title">Jalgaon</a>
+							<a href="#" class="title">Service Area</a>
 							<p class="sub-title">Maharashtra</p>
 						</div>
 					</div>
