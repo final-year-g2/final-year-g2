@@ -312,7 +312,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="heading">
-						<h4 class="heading-title">Have You Any Questions?</h4>
+						<h4 class="heading-title">Do You Have Any Questions?</h4>
 						<div class="heading-line">
 							<span class="short-line"></span>
 							<span class="long-line"></span>
@@ -322,14 +322,14 @@
 				</div>
 			</div>
 
-			<form class="contact-form crumina-submit" data-nonce="crumina-submit-form-nonce" data-type="standard" action="modules/forms/submit.php">
+			<form  enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeIAnrZr2Ti_nrfx9EDm3uBwtuuYAFERZpZvFKzjHPa-q_sNg/formResponse?" onsubmit="func()">
 				<div class="row">
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<input name="site" class="email input-standard-grey" placeholder="Website URL" type="text" required>
+						<input name="entry.2005620554" id="entry.2005620554" class="input-standard-grey" placeholder="Your Name" type="text" autofocus>
 					</div>
 
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<input name="name" class="email input-standard-grey" placeholder="Your Name" type="text" required>
+						<input name="entry.538319479" id="entry.538319479" class="input-standard-grey" placeholder="Business / Home" type="text">
 					</div>
 
 				</div>
@@ -337,25 +337,31 @@
 				<div class="row">
 
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<input name="email" class="email input-standard-grey" placeholder="Email Address" type="email" required>
+						<input name="entry.1045781291" id="entry.1045781291" class="input-standard-grey" placeholder="Email Address" type="email">
 					</div>
 
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<input name="phone" class="email input-standard-grey" placeholder="Phone" type="text">
+						<input name="entry.1166974658" id="entry.1166974658" class="input-standard-grey" placeholder="Phone Number" type="text">
 					</div>
 
 				</div>
 
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<textarea name="message" class="email input-standard-grey" placeholder="Details"></textarea>
+						<input name="entry.1065046570" id="entry.1065046570" class="input-standard-grey" placeholder="Address"></input>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<input name="entry.839337160" id="entry.839337160" class="input-standard-grey" placeholder="Comments"></input>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="submit-block table">
 						<div class="col-lg-3 table-cell">
-							<button class="btn btn-small btn--primary">
+							<button type="submit" class="btn btn-small btn--primary">
 								<span class="text">Submit Now</span>
 							</button>
 						</div>
@@ -367,6 +373,15 @@
 					</div>
 				</div>
 			</form>
+
+			<iframe name="hidden_iframe" style="display:none;"></iframe>
+		 <script type="text/javascript">
+			 function func(){
+				 alert("Your message has been sent. Thank you!");
+				 console.log("Date sent");
+				 // location.href = "contact.html";
+			 }
+			 </script>
 
 		</div>
 	</div>
@@ -565,14 +580,6 @@
 <script src="js/js-plugins/MarkerClusterGroup.js"></script>
 
 <script src="js/main.js"></script>
-
-<!-- jQuery-scripts for Modules (Send Message) -->
-<script src="modules/forms/src/js/jquery.validate.min.js"></script>
-<script src="modules/forms/src/js/sweetalert2.all.js"></script>
-<script src="modules/forms/src/js/scripts.js"></script>
-<!-- /jQuery-scripts for Modules (Send Message) -->
-
-<!-- ...end JS Script -->
 
 
 </body>

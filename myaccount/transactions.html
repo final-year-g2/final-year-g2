@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zopens Network - Internet Service Provider</title>
+  	<link rel="icon" href="../img/logo.png" type="image/png">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+    <!-- Firebase -->
+  	<!-- The core Firebase JS SDK is always required and must be listed first -->
+  	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCPneO4tHlcLE1o19sqzFPyryDb2MmlXo4",
+        authDomain: "zopens-network.firebaseapp.com",
+        databaseURL: "https://zopens-network.firebaseio.com",
+        projectId: "zopens-network",
+        storageBucket: "zopens-network.appspot.com",
+        messagingSenderId: "291704072534",
+        appId: "1:291704072534:web:e5e335d2d00ec918090ef7"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- Firebase Ends-->
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header" style="text-align:center">
+                <!-- <h3>Zopens Network</h3> -->
+                <img src="../img/logo.png" alt="">
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>My Account</p>
+                <li>
+                    <a href="profile.html">Profile</a>
+                </li>
+                <li>
+                    <a href="profile.html">Saved Address</a>
+                </li>
+                <li  style="background-color:#fff;color:#7386D5">
+                    <a href="transactions.html">Transactions</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- Orders -->
+        <div id="content" class="personal_details">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#" id="step1">Transaction Details</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="card" style="padding:10px">
+              <h3 style="margin:20px">My Orders</h3>
+
+              <table class="table table-striped table-bordered table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col"># Order ID</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Items</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Invoice Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>12/10/2020</td>
+                    <td>DLink Router</td>
+                    <td>999</td>
+                    <td><a href="#">Icon</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>14/06/2020</td>
+                    <td>DLink Router</td>
+                    <td>999</td>
+                    <td><a>Icon</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>01/03/2020</td>
+                    <td>TLink Router</td>
+                    <td>800</td>
+                    <td><a>Icon</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+            $('#sidebarCollapse2').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+      function toggle_page(i){
+        if(i==1){
+          document.getElementsByClassName("personal_details")[0].style="display:block";
+          document.getElementsByClassName("addresses")[0].style="display:none";
+          document.getElementById("profile_btn").style="background-color:#fff;color:#7386D5";
+          document.getElementById("add_btn").style="all:unset";
+        }
+        else{
+          document.getElementsByClassName("personal_details")[0].style="display:none";
+          document.getElementsByClassName("addresses")[0].style="display:block";
+          document.getElementById("add_btn").style="background-color:#fff;color:#7386D5";
+          document.getElementById("profile_btn").style="all:unset";
+        }
+      }
+    </script>
+</body>
+
+</html>

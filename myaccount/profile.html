@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zopens Network - Internet Service Provider</title>
+  	<link rel="icon" href="../img/logo.png" type="image/png">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+    <!-- Firebase -->
+  	<!-- The core Firebase JS SDK is always required and must be listed first -->
+  	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCPneO4tHlcLE1o19sqzFPyryDb2MmlXo4",
+        authDomain: "zopens-network.firebaseapp.com",
+        databaseURL: "https://zopens-network.firebaseio.com",
+        projectId: "zopens-network",
+        storageBucket: "zopens-network.appspot.com",
+        messagingSenderId: "291704072534",
+        appId: "1:291704072534:web:e5e335d2d00ec918090ef7"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- Firebase Ends-->
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header" style="text-align:center">
+                <!-- <h3>Zopens Network</h3> -->
+                <img src="../img/logo.png" alt="">
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>My Account</p>
+                <li id="profile_btn" style="background-color:#fff;color:#7386D5">
+                    <a href="#" onclick="toggle_page(1)">Profile</a>
+                </li>
+                <li id="add_btn">
+                    <a href="#" onclick="toggle_page(2)">Saved Address</a>
+                </li>
+                <li>
+                    <a href="transactions.html">Transactions</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Details Form -->
+        <div id="content" class="personal_details">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#" id="step1">Personal Details</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <h3>Personal Details</h3>
+            <form onclick="step1_complete(); return false">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Mobile Number</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email Address</label>
+                <input type="textarea" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Account Type</label>
+                <select class="custom-select">
+                  <option value="">Personal</option>
+                  <option value="">Business</option>
+                  <option value="">Company</option>
+                </select>
+              </div>
+              <button class="btn btn-primary">Save Details</button>
+            </form>
+
+        </div>
+        <!-- Details form ends -->
+
+        <!-- Saved Addresses -->
+        <div id="content" class="addresses"  style="display:none">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+
+                  <button type="button" id="sidebarCollapse2" class="btn btn-info">
+                      <i class="fas fa-align-left"></i>
+                      <span>Toggle Sidebar</span>
+                  </button>
+                  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <i class="fas fa-align-justify"></i>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="nav navbar-nav ml-auto">
+                          <li class="nav-item active">
+                              <a class="nav-link" href="#" id="step1">Saved Addresses</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12" style="margin-top:15px">
+                <div class="card">
+                  <div class="card-header">
+                    Address 1
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Metro Station, 109,Midas</h5>
+                    <p class="card-text">Sahar Plaza Complex Next to Kohinoor Hotel, Andheri- Kurla Rd, near Chakala, J B Nagar, Andheri East, Mumbai, Maharashtra 400059</p>
+                    <a href="#" class="btn btn-primary">Update</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="card" style="width:60%;padding:2% 5%;margin: 0 auto">
+            <h3 style="text-align:center">Add New Addresses</h3>
+            <br>
+            <form>
+              <input type="text" class="form-control" placeholder="Address Line 1" required autofocus>
+              <br>
+              <input type="text" class="form-control" placeholder="Address Line 2" required>
+              <br>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="City" required>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Postal Code" required>
+                </div>
+              </div>
+              <br>
+              <input type="text" class="form-control" placeholder="State" required>
+              <br>
+              <select id="inputState" class="form-control" required>
+                <option selected>Address Label</option>
+                <option>Home</option>
+                <option>Office</option>
+                <option>Other</option>
+              </select>
+              <br>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Make Default Address</label>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+
+        </div>
+        <!-- Saved Addresses Ends-->
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+            $('#sidebarCollapse2').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+      function toggle_page(i){
+        if(i==1){
+          document.getElementsByClassName("personal_details")[0].style="display:block";
+          document.getElementsByClassName("addresses")[0].style="display:none";
+          document.getElementById("profile_btn").style="background-color:#fff;color:#7386D5";
+          document.getElementById("add_btn").style="all:unset";
+        }
+        else{
+          document.getElementsByClassName("personal_details")[0].style="display:none";
+          document.getElementsByClassName("addresses")[0].style="display:block";
+          document.getElementById("add_btn").style="background-color:#fff;color:#7386D5";
+          document.getElementById("profile_btn").style="all:unset";
+        }
+      }
+    </script>
+</body>
+
+</html>

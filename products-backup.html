@@ -27,88 +27,10 @@
 	<link rel="stylesheet" type="text/css" href="css/primary-menu.css">
 	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
 
+
 	<!--External fonts-->
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
-	<style media="screen">
-			#myImg {
-			  border-radius: 5px;
-			  cursor: pointer;
-			  transition: 0.3s;
-			}
-
-			#myImg:hover {
-				cursor: zoom-in;
-				opacity: 0.7;}
-
-			/* The Modal (background) */
-			.modal {
-			  display: none; /* Hidden by default */
-			  position: fixed; /* Stay in place */
-			  z-index: 10; /* Sit on top */
-			  padding-top: 100px; /* Location of the box */
-			  left: 0;
-			  top: 0;
-			  width: 100%; /* Full width */
-			  height: 100%; /* Full height */
-			  overflow: auto; /* Enable scroll if needed */
-			  background-color: rgb(0,0,0); /* Fallback color */
-			  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-			}
-
-			/* Modal Content (image) */
-			.modal-content {
-			  margin: auto;
-			  display: block;
-			  width: 80%;
-			  max-width: 700px;
-			}
-
-			/* Add Animation */
-			.modal-content {
-			  -webkit-animation-name: zoom;
-			  -webkit-animation-duration: 0.6s;
-			  animation-name: zoom;
-			  animation-duration: 0.6s;
-			}
-
-			@-webkit-keyframes zoom {
-			  from {-webkit-transform:scale(0)}
-			  to {-webkit-transform:scale(1)}
-			}
-
-			@keyframes zoom {
-			  from {transform:scale(0)}
-			  to {transform:scale(1)}
-			}
-
-			/* The Close Button */
-			.close {
-			  position: absolute;
-			  top: 15px;
-			  right: 35px;
-			  color: #f1f1f1;
-			  font-size: 40px;
-			  font-weight: bold;
-			  transition: 0.3s;
-			}
-
-			.close:hover,
-			.close:focus {
-			  color: #bbb;
-			  text-decoration: none;
-			  cursor: pointer;
-			}
-
-			/* 100% Image Width on Smaller Screens */
-			@media only screen and (max-width: 700px){
-			  .modal-content {
-			    width: 100%;
-			  }
-			}
-	</style>
-
-	<!-- Empty Cart Card -->
 	<script type="text/javascript">
 
 			window.onclick = e => {
@@ -126,50 +48,6 @@
 			}
 
 	</script>
-
-	<!-- Firebase -->
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
-	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
-
-	<script>
-	  // Your web app's Firebase configuration
-	  var firebaseConfig = {
-	    apiKey: "AIzaSyCPneO4tHlcLE1o19sqzFPyryDb2MmlXo4",
-	    authDomain: "zopens-network.firebaseapp.com",
-	    databaseURL: "https://zopens-network.firebaseio.com",
-	    projectId: "zopens-network",
-	    storageBucket: "zopens-network.appspot.com",
-	    messagingSenderId: "291704072534",
-	    appId: "1:291704072534:web:e5e335d2d00ec918090ef7"
-	  };
-	  // Initialize Firebase
-	  firebase.initializeApp(firebaseConfig);
-	</script>
-
-	<script type="text/javascript">
-
-		itemcode = window.location.search.split("=")[1];
-		firebase.database().ref('/Products/'+itemcode).once('value').then(function(snapshot) {
-		  var data = snapshot.val()
-		  console.log(data);
-			// function after data is loaded
-			Brand = data["Brand"];
-			Description = data["Description"];
-			Name = data["Name"];
-			Price = data["Price"];
-			Qty = data["Qty"];
-
-			document.getElementById("Brand").innerHTML = Brand;
-			document.getElementById("Price").innerHTML = "₹" + Price;
-			document.getElementById("Name").innerHTML = Name;
-			document.getElementById("Description").innerHTML = Description;
-			document.getElementById("Qty").innerHTML = Qty;
-		});
-
-	</script>
-
 </head>
 
 
@@ -317,83 +195,290 @@
 
 <div class="content-wrapper">
 
-	<!-- Product details -->
+	<!-- Stunning header -->
+	<div class="stunning-header stunning-header-bg-blue">
+		<div class="stunning-header-content">
+			<h1 class="stunning-header-title">Products</h1>
+		</div>
+	</div>
+	<!-- End Stunning header -->
 
+	<!-- Books products grid -->
 	<div class="container">
-		<div class="row medium-padding120">
-			<div class="product-details">
 
-				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-					<div class="product-details-thumb">
 
-						<div class="swiper-container">
+		<div class="books-grid">
+			<div class="row" style="padding-top:40px; padding-bottom:-40px;">
+				<div class="col-lg-12">
 
-							<!-- Additional required wrapper -->
-							<div class="swiper-wrapper">
-								<!-- Slides -->
-
-								<div class="swiper-slide"><img src="Products/1.jpg" alt="product" id="myImg"></div>
-								<div class="swiper-slide"><img src="Products/2.jpg" alt="product"></div>
-								<div class="swiper-slide"><img src="Products/3.jpg" alt="product"></div>
-								<div class="swiper-slide"><img src="Products/4.jpg" alt="product"></div>
-							</div>
-							<!-- If we need pagination -->
-							<div class="swiper-pagination"></div>
+					<div class="books-grid-control">
+						<div class="showing">
+							Showing <span>1-9</span> of <span>24</span> results
 						</div>
 
+						<div class="sort" style="width:400px">
+							<form>
+								<!-- <i class='fa fa-search-plus'></i> -->
+								<!-- <input type="text" placeholder=" Search" style="" /> -->
+								<input type="text" placeholder="Search... &#xF002;"  style="font-family:Arial, FontAwesome;border-radius:40px;color:black;background-color:#f7f9f9">
+							</form>
+
+						</div>
+
+						<div class="sort" style="margin-left:40px;">
+							<select>
+								<option data-display="Default sorting" style="color:black">Default sorting</option>
+								<option value="4">Sort by price: low to high</option>
+								<option value="3">Sort by price: high to low</option>
+							</select>
+						</div>
 					</div>
 
 				</div>
+			</div>
 
-				<div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-					<div class="product-details-info">
-						<h3 class="product-details-info-title" id="Name">Item Name Loading...</h3>
-						<div class="product-details-info-price" id="Price">Price Loading...</div>
-						<div class="product-details-info-ratings">
-							<div class="ratings">
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star-o" aria-hidden="true"></i>
-							</div>
-							<a href="#" class="reviews">Quantity Left:</a> <a href="#" class="reviews" id="Qty"></a>
-						</div>
-						<p class="product-details-info-text" style="color:black" id="Description">Loading Description...
-						</p>
+			<div class="row mb30">
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="books-item new">
 
-						<div class="quantity">
-							<a href="#" class="quantity-minus">-</a>
-							<input title="Qty" class="email input-text qty text" type="text" value="2">
-							<a href="#" class="quantity-plus">+</a>
+						<img src="Products/2.jpg" alt="book">
+
+						<div class="books-item-info">
+							<div class="books-author">Douglas Brown</div>
+							<a href="17_product_details.html" class="books-title h5">The Basic Principles</a>
+
+							<div class="books-price">$36.99</div>
 						</div>
 
-						<a href="19_cart.html" class="btn btn-medium btn--primary">
+						<a href="19_cart.html" class="btn btn-small btn--dark add">
 							<span class="text">Add to Cart</span>
-							<i class="fa fa-shopping-cart"></i>
-							<span class="semicircle"></span>
+							<i class="seoicon-commerce"></i>
 						</a>
-					</div>
 
-					<div class="product-details-add-info">
-						<div class="author">Brand:
-							<a href="#" class="author-name" id="Brand">Loading...</a>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="books-item" style="all:unset">
+
+						<img src="Products/4.jpg" alt="book" style="all:unset">
+						<div class="books-author">Samuel Peterson</div>
+						<a href="17_product_details.html" class="books-title h5">Multi Antenna Router</a>
+
+
+						<div class="books-item-info">
+							<div class="books-price">$20.00</div>
 						</div>
+
+						<a href="19_cart.html" class="btn btn-small btn--dark add">
+							<span class="text">Add to Cart</span>
+							<i class="fa fa-cart"></i>
+						</a>
+
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="books-item added">
+						<div class="books-item-thumb">
+							<img src="img/book3.png" alt="book">
+							<div class="overlay overlay-books"></div>
+						</div>
+
+						<div class="books-item-info">
+							<div class="books-author">Callum Bailey</div>
+							<a href="17_product_details.html" class="books-title h5">Search Marketing</a>
+
+							<div class="books-price">$58.00</div>
+						</div>
+
+						<a href="19_cart.html" class="btn btn-small btn--primary view">
+							<span class="text">View Cart</span>
+							<i class="seoicon-check"></i>
+						</a>
+
 					</div>
 				</div>
 			</div>
+
+			<div class="row mb30">
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="books-item">
+						<div class="books-item-thumb">
+							<img src="img/book4.png" alt="book">
+							<div class="new">New</div>
+							<div class="sale">Sale</div>
+							<div class="overlay overlay-books"></div>
+						</div>
+
+						<div class="books-item-info">
+							<div class="books-author">Douglas Brown</div>
+							<a href="17_product_details.html" class="books-title h5">Web Analytics</a>
+
+							<div class="books-price">$8.99</div>
+						</div>
+
+						<a href="19_cart.html" class="btn btn-small btn--dark add">
+							<span class="text">Add to Cart</span>
+							<i class="seoicon-commerce"></i>
+						</a>
+
+
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="books-item sale">
+						<div class="books-item-thumb">
+							<img src="img/book5.png" alt="book">
+							<div class="new">New</div>
+							<div class="sale">Sale</div>
+							<div class="overlay overlay-books"></div>
+						</div>
+
+						<div class="books-item-info">
+							<div class="books-author">Abby Banks</div>
+							<a href="17_product_details.html" class="books-title h5">Promoting Content</a>
+
+							<div class="books-price"><span class="del">$23.99</span> $16.99</div>
+						</div>
+
+						<a href="19_cart.html" class="btn btn-small btn--dark add">
+							<span class="text">Add to Cart</span>
+							<i class="seoicon-commerce"></i>
+						</a>
+
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="books-item">
+						<div class="books-item-thumb">
+							<img src="img/book6.png" alt="book">
+							<div class="new">New</div>
+							<div class="sale">Sale</div>
+							<div class="overlay overlay-books"></div>
+						</div>
+
+						<div class="books-item-info">
+							<div class="books-author">Peter Spencer</div>
+							<a href="17_product_details.html" class="books-title h5">Presenting Data</a>
+
+							<div class="books-price">$63.00</div>
+						</div>
+
+						<a href="19_cart.html" class="btn btn-small btn--dark add">
+							<span class="text">Add to Cart</span>
+							<i class="seoicon-commerce"></i>
+						</a>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row pb80">
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="books-item">
+						<div class="books-item-thumb">
+							<img src="img/book7.png" alt="book">
+							<div class="new">New</div>
+							<div class="sale">Sale</div>
+							<div class="overlay overlay-books"></div>
+						</div>
+
+						<div class="books-item-info">
+							<div class="books-author">Douglas Brown</div>
+							<a href="17_product_details.html" class="books-title h5">The Basic Principles</a>
+
+							<div class="books-price free">Free</div>
+						</div>
+
+						<a href="#" class="btn btn-small btn--light-green btn-hover-shadow">
+							<span class="text">Download</span>
+							<i class="seoicon-arrow-to-bottom"></i>
+						</a>
+
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="books-item">
+						<div class="books-item-thumb">
+							<img src="img/book8.png" alt="book">
+							<div class="new">New</div>
+							<div class="sale">Sale</div>
+							<div class="overlay overlay-books"></div>
+						</div>
+
+						<div class="books-item-info">
+							<div class="books-author">Samuel Peterson</div>
+							<a href="17_product_details.html" class="books-title h5">SEO Community</a>
+
+							<div class="books-price">$20.00</div>
+						</div>
+
+						<a href="19_cart.html" class="btn btn-small btn--dark add">
+							<span class="text">Add to Cart</span>
+							<i class="seoicon-commerce"></i>
+						</a>
+
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="books-item">
+						<div class="books-item-thumb">
+							<img src="img/book9.png" alt="book">
+							<div class="new">New</div>
+							<div class="sale">Sale</div>
+							<div class="overlay overlay-books"></div>
+						</div>
+
+						<div class="books-item-info">
+							<div class="books-author">Callum Bailey</div>
+							<a href="17_product_details.html" class="books-title h5">Search Marketing</a>
+
+							<div class="books-price">$58.00</div>
+						</div>
+
+						<a href="19_cart.html" class="btn btn-small btn--dark add">
+							<span class="text">Add to Cart</span>
+							<i class="seoicon-commerce"></i>
+						</a>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row pb120">
+
+				<div class="col-lg-12">
+
+					<nav class="navigation align-center">
+
+						<a href="#" class="page-numbers bg-border-color current"><span>1</span></a>
+						<a href="#" class="page-numbers bg-border-color"><span>2</span></a>
+						<a href="#" class="page-numbers bg-border-color"><span>3</span></a>
+						<a href="#" class="page-numbers bg-border-color"><span>4</span></a>
+						<a href="#" class="page-numbers bg-border-color"><span>5</span></a>
+
+						<svg class="btn-prev">
+							<use xlink:href="#arrow-left"></use>
+						</svg>
+						<svg class="btn-next">
+							<use xlink:href="#arrow-right"></use>
+						</svg>
+
+					</nav>
+
+				</div>
+
+			</div>
 		</div>
 	</div>
-
-	<!-- End Product details -->
-
-</div>
+	<!-- End Books products grid -->
 
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-	<span class="close">&times;</span>
-	<img class="modal-content" id="img01">
 </div>
 
 <!-- Footer -->
@@ -514,7 +599,6 @@
 </footer>
 <!-- End Footer -->
 
-
 <svg style="display:none;">
 	<symbol id="arrow-left" viewBox="122.9 388.2 184.3 85">
 		<path d="M124.1,431.3c0.1,2,1,3.8,2.4,5.2c0,0,0.1,0.1,0.1,0.1l34.1,34.1c1.6,1.6,3.7,2.5,5.9,2.5s4.3-0.9,5.9-2.4
@@ -586,38 +670,14 @@
 
 <script src="js/main.js"></script>
 
+<!-- jQuery-scripts for Modules (Send Message) -->
+<script src="modules/forms/src/js/jquery.validate.min.js"></script>
+<script src="modules/forms/src/js/sweetalert2.all.js"></script>
+<script src="modules/forms/src/js/scripts.js"></script>
+<!-- /jQuery-scripts for Modules (Send Message) -->
 
-<!-- Modal JS-->
-<script>
-		// Get the modal
-		var modal = document.getElementById("myModal");
+<!-- ...end JS Script -->
 
-		// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var img = document.getElementById("myImg");
-		var modalImg = document.getElementById("img01");
-		img.onclick = function(){
-			modal.style.display = "block";
-			modalImg.src = this.src;
-
-			document.getElementById("site-header").style="display:none";
-			document.getElementsByClassName("content-wrapper")[0].style="display:none";
-			document.getElementsByClassName("top-bar top-bar")[0].style="display:none";
-			document.getElementsByClassName("footer")[0].style="display:none";
-		}
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-			modal.style.display = "none";
-
-			document.getElementById("site-header").style="display:block";
-			document.getElementsByClassName("content-wrapper")[0].style="display:block";
-			document.getElementsByClassName("top-bar top-bar")[0].style="display:block;background-color:#13b6ffba";
-			document.getElementsByClassName("footer")[0].style="display:block";
-		}
-</script>
 
 </body>
 </html>
