@@ -588,7 +588,6 @@
 
 
 	<!-- Subscribe Form -->
-
 	<div class="container-fluid bg-green-color" style="margin-top:-60px">
 	            <div class="row">
 	                <div class="container-fluid" style="margin:0 25px;">
@@ -601,27 +600,36 @@
 	                                <h4 class="subscribe-title">
 	                                Quick Connect For New Connection
 	                                </h4>
-	                                <form id="contact_form" class="subscribe-form" method="post" action="send_mail.php">
-	                                <div class="row">
-	                                <div class="col-lg-4">
-	                                <input class=" input-standard-grey input-white" name="name" required="required" placeholder="Your Name" type="text">
-	                                        </div>
-	                                <div class="col-lg-4">
-	                                <input class=" input-standard-grey input-white" name="phone" required="required" placeholder="Phone" type="text">
-	                                        </div>
-	                                <div class="col-lg-4">
-	                                <input class=" input-standard-grey input-white" name="location" required="required" placeholder="Location" type="text">
-	                                        </div>
-	                                </div>
+	                                <form  enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeIAnrZr2Ti_nrfx9EDm3uBwtuuYAFERZpZvFKzjHPa-q_sNg/formResponse?" target="hidden_iframe" onsubmit="func()">
+			                                <div class="row">
+			                                	<div class="col-lg-4">
+																					 <input name="entry.2005620554" id="entry.2005620554" class="input-standard-grey" placeholder="Your Name" type="text" required>
+			                                   </div>
+			                                	<div class="col-lg-4">
+			                                		 <input name="entry.1166974658" id="entry.1166974658" class="input-standard-grey" placeholder="Phone Number" type="text" required>
+			                                  </div>
+			                                	<div class="col-lg-4">
+			                                			<input name="entry.1065046570" id="entry.1065046570" class="input-standard-grey" placeholder="Location" required></input>
+			                                  </div>
+			                                </div>
+																			<input style="display:none;" name="entry.1045781291" id="entry.1045781291" value="quick@connect.form" type="email">
+																			<input style="display:none;" name="entry.538319479" id="entry.538319479" value="None" type="text">
+																			<input style="display:none;"  name="entry.839337160" id="entry.839337160"placeholder="Quick Connect Form"></input>
 
-	                                <input style="display:none;" class="input-standard-grey input-white" name="email" value="anonymous@wnet.net.in" type="text">
-
-	                                    <button class="btn btn--dark submit-width">
+	                                    <button type="submit" class="btn btn--dark submit-width">
 	                                        Submit
 	                                        <span class="semicircle--right"></span>
 	                                    </button>
 	                                </form>
-	                                <!-- <div class="sub-title">Sign up for new Seosignt content, updates, surveys & offers.</div> -->
+
+																	<iframe name="hidden_iframe" style="display:none;"></iframe>
+																	 <script type="text/javascript">
+																		 function func(){
+																			 alert("Your message has been sent. Thank you!");
+																			 console.log("Date sent");
+																			 location.reload();
+																		 }
+																	 </script>
 
 	                            </div>
 
@@ -635,7 +643,6 @@
 	                </div>
 	            </div>
 	        </div>
-
 	<!-- End Subscribe Form -->
 
 
@@ -892,7 +899,7 @@
 									<span class="semicircle"></span>
 								</a>
 
-								<a href="Broadband.html" class="btn btn-medium btn--blue">
+								<a href="https://forms.gle/bc5VZPdmM3wvMnot5" target="_blank" class="btn btn-medium btn--blue">
 									<span class="text">Register with Us</span>
 									<span class="semicircle"></span>
 								</a>

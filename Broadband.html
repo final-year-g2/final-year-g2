@@ -394,11 +394,11 @@
 					</div>
 
 				<div style="text-align:center;margin-top: 30px; margin-bottom: -70px">
-						<a href="#" class="btn btn-medium btn--green">
+						<a href="https://github.com/final-year-g2/final-year-g2.github.io/raw/master/img/Brochure.pdf" class="btn btn-medium btn--green">
 							<span class="text">Download PDF Brochure</span>
 							<span class="semicircle"></span>
 						</a>
-						<a href="#" class="btn btn-medium btn--blue">
+						<a href="https://forms.gle/bc5VZPdmM3wvMnot5" target="_blank" class="btn btn-medium btn--blue">
 							<span class="text">Register with Us</span>
 							<span class="semicircle"></span>
 						</a>
@@ -426,7 +426,7 @@
 					</div>
 
 					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 table-cell">
-						<a href="www.speedtest.com/server/zopens" target="_blank" class="btn btn-medium btn--dark btn-hover-shadow">
+						<a href="https://www.speedtest.net/server/zopens" target="_blank" class="btn btn-medium btn--dark btn-hover-shadow">
 							<span class="text">Check our Server Speed</span>
 							<span class="semicircle"></span>
 						</a>
@@ -530,27 +530,36 @@
 	                                <h4 class="subscribe-title">
 	                                Quick Connect For New Connection
 	                                </h4>
-	                                <form id="contact_form" class="subscribe-form" method="post" action="send_mail.php">
-	                                <div class="row">
-	                                <div class="col-lg-4">
-	                                <input class=" input-standard-grey input-white" name="name" required="required" placeholder="Your Name" type="text">
-	                                        </div>
-	                                <div class="col-lg-4">
-	                                <input class=" input-standard-grey input-white" name="phone" required="required" placeholder="Phone" type="text">
-	                                        </div>
-	                                <div class="col-lg-4">
-	                                <input class=" input-standard-grey input-white" name="location" required="required" placeholder="Location" type="text">
-	                                        </div>
-	                                </div>
+	                                <form  enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeIAnrZr2Ti_nrfx9EDm3uBwtuuYAFERZpZvFKzjHPa-q_sNg/formResponse?" target="hidden_iframe" onsubmit="func()">
+			                                <div class="row">
+			                                	<div class="col-lg-4">
+																					 <input name="entry.2005620554" id="entry.2005620554" class="input-standard-grey" placeholder="Your Name" type="text" required>
+			                                   </div>
+			                                	<div class="col-lg-4">
+			                                		 <input name="entry.1166974658" id="entry.1166974658" class="input-standard-grey" placeholder="Phone Number" type="text" required>
+			                                  </div>
+			                                	<div class="col-lg-4">
+			                                			<input name="entry.1065046570" id="entry.1065046570" class="input-standard-grey" placeholder="Location" required></input>
+			                                  </div>
+			                                </div>
+																			<input style="display:none;" name="entry.1045781291" id="entry.1045781291" value="quick@connect.form" type="email">
+																			<input style="display:none;" name="entry.538319479" id="entry.538319479" value="None" type="text">
+																			<input style="display:none;"  name="entry.839337160" id="entry.839337160"placeholder="Quick Connect Form"></input>
 
-	                                <input style="display:none;" class="input-standard-grey input-white" name="email" value="anonymous@wnet.net.in" type="text">
-
-	                                    <button class="btn btn--dark submit-width">
+	                                    <button type="submit" class="btn btn--dark submit-width">
 	                                        Submit
 	                                        <span class="semicircle--right"></span>
 	                                    </button>
 	                                </form>
-	                                <!-- <div class="sub-title">Sign up for new Seosignt content, updates, surveys & offers.</div> -->
+
+																	<iframe name="hidden_iframe" style="display:none;"></iframe>
+																	 <script type="text/javascript">
+																		 function func(){
+																			 alert("Your message has been sent. Thank you!");
+																			 console.log("Date sent");
+																			 location.reload();
+																		 }
+																	 </script>
 
 	                            </div>
 

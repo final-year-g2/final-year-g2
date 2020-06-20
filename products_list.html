@@ -48,10 +48,19 @@
 			}
 
 	</script>
+
+
+	<script>
+		function ResizeFunction() {
+			obj = document.getElementById("iframe");
+			var iframeDocHeight = obj.contentWindow.document.getElementsByTagName('body')[0].scrollHeight;
+			obj.style.height = iframeDocHeight + 'px';
+		}
+	</script>
 </head>
 
 
-<body>
+<body onload="ResizeFunction()">
 
 <!-- Header -->
 <div class="top-bar top-bar" style="background-color:#13b6ffba">
@@ -192,294 +201,7 @@
 </header>
 <!-- ... End Header -->
 
-
-<div class="content-wrapper">
-
-	<!-- Stunning header -->
-	<div class="stunning-header stunning-header-bg-blue">
-		<div class="stunning-header-content">
-			<h1 class="stunning-header-title">Products</h1>
-		</div>
-	</div>
-	<!-- End Stunning header -->
-
-	<!-- Books products grid -->
-	<div class="container">
-
-
-		<div class="books-grid">
-			<div class="row" style="padding-top:40px; padding-bottom:-40px;">
-				<div class="col-lg-12">
-
-					<div class="books-grid-control">
-						<div class="showing">
-							Showing <span>1-9</span> of <span>24</span> results
-						</div>
-
-						<div class="sort" style="width:400px">
-							<form>
-								<!-- <i class='fa fa-search-plus'></i> -->
-								<!-- <input type="text" placeholder=" Search" style="" /> -->
-								<input type="text" placeholder="Search... &#xF002;"  style="font-family:Arial, FontAwesome;border-radius:40px;color:black;background-color:#f7f9f9">
-							</form>
-
-						</div>
-
-						<div class="sort" style="margin-left:40px;">
-							<select>
-								<option data-display="Default sorting" style="color:black">Default sorting</option>
-								<option value="4">Sort by price: low to high</option>
-								<option value="3">Sort by price: high to low</option>
-							</select>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-			<div class="row mb30">
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="books-item new">
-
-						<img src="Products/2.jpg" alt="book">
-
-						<div class="books-item-info">
-							<div class="books-author">Douglas Brown</div>
-							<a href="17_product_details.html" class="books-title h5">The Basic Principles</a>
-
-							<div class="books-price">$36.99</div>
-						</div>
-
-						<a href="19_cart.html" class="btn btn-small btn--dark add">
-							<span class="text">Add to Cart</span>
-							<i class="seoicon-commerce"></i>
-						</a>
-
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="books-item" style="all:unset">
-
-						<img src="Products/4.jpg" alt="book" style="all:unset">
-						<div class="books-author">Samuel Peterson</div>
-						<a href="17_product_details.html" class="books-title h5">Multi Antenna Router</a>
-
-
-						<div class="books-item-info">
-							<div class="books-price">$20.00</div>
-						</div>
-
-						<a href="19_cart.html" class="btn btn-small btn--dark add">
-							<span class="text">Add to Cart</span>
-							<i class="fa fa-cart"></i>
-						</a>
-
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="books-item added">
-						<div class="books-item-thumb">
-							<img src="img/book3.png" alt="book">
-							<div class="overlay overlay-books"></div>
-						</div>
-
-						<div class="books-item-info">
-							<div class="books-author">Callum Bailey</div>
-							<a href="17_product_details.html" class="books-title h5">Search Marketing</a>
-
-							<div class="books-price">$58.00</div>
-						</div>
-
-						<a href="19_cart.html" class="btn btn-small btn--primary view">
-							<span class="text">View Cart</span>
-							<i class="seoicon-check"></i>
-						</a>
-
-					</div>
-				</div>
-			</div>
-
-			<div class="row mb30">
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="books-item">
-						<div class="books-item-thumb">
-							<img src="img/book4.png" alt="book">
-							<div class="new">New</div>
-							<div class="sale">Sale</div>
-							<div class="overlay overlay-books"></div>
-						</div>
-
-						<div class="books-item-info">
-							<div class="books-author">Douglas Brown</div>
-							<a href="17_product_details.html" class="books-title h5">Web Analytics</a>
-
-							<div class="books-price">$8.99</div>
-						</div>
-
-						<a href="19_cart.html" class="btn btn-small btn--dark add">
-							<span class="text">Add to Cart</span>
-							<i class="seoicon-commerce"></i>
-						</a>
-
-
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="books-item sale">
-						<div class="books-item-thumb">
-							<img src="img/book5.png" alt="book">
-							<div class="new">New</div>
-							<div class="sale">Sale</div>
-							<div class="overlay overlay-books"></div>
-						</div>
-
-						<div class="books-item-info">
-							<div class="books-author">Abby Banks</div>
-							<a href="17_product_details.html" class="books-title h5">Promoting Content</a>
-
-							<div class="books-price"><span class="del">$23.99</span> $16.99</div>
-						</div>
-
-						<a href="19_cart.html" class="btn btn-small btn--dark add">
-							<span class="text">Add to Cart</span>
-							<i class="seoicon-commerce"></i>
-						</a>
-
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="books-item">
-						<div class="books-item-thumb">
-							<img src="img/book6.png" alt="book">
-							<div class="new">New</div>
-							<div class="sale">Sale</div>
-							<div class="overlay overlay-books"></div>
-						</div>
-
-						<div class="books-item-info">
-							<div class="books-author">Peter Spencer</div>
-							<a href="17_product_details.html" class="books-title h5">Presenting Data</a>
-
-							<div class="books-price">$63.00</div>
-						</div>
-
-						<a href="19_cart.html" class="btn btn-small btn--dark add">
-							<span class="text">Add to Cart</span>
-							<i class="seoicon-commerce"></i>
-						</a>
-
-					</div>
-				</div>
-			</div>
-
-			<div class="row pb80">
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="books-item">
-						<div class="books-item-thumb">
-							<img src="img/book7.png" alt="book">
-							<div class="new">New</div>
-							<div class="sale">Sale</div>
-							<div class="overlay overlay-books"></div>
-						</div>
-
-						<div class="books-item-info">
-							<div class="books-author">Douglas Brown</div>
-							<a href="17_product_details.html" class="books-title h5">The Basic Principles</a>
-
-							<div class="books-price free">Free</div>
-						</div>
-
-						<a href="#" class="btn btn-small btn--light-green btn-hover-shadow">
-							<span class="text">Download</span>
-							<i class="seoicon-arrow-to-bottom"></i>
-						</a>
-
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="books-item">
-						<div class="books-item-thumb">
-							<img src="img/book8.png" alt="book">
-							<div class="new">New</div>
-							<div class="sale">Sale</div>
-							<div class="overlay overlay-books"></div>
-						</div>
-
-						<div class="books-item-info">
-							<div class="books-author">Samuel Peterson</div>
-							<a href="17_product_details.html" class="books-title h5">SEO Community</a>
-
-							<div class="books-price">$20.00</div>
-						</div>
-
-						<a href="19_cart.html" class="btn btn-small btn--dark add">
-							<span class="text">Add to Cart</span>
-							<i class="seoicon-commerce"></i>
-						</a>
-
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="books-item">
-						<div class="books-item-thumb">
-							<img src="img/book9.png" alt="book">
-							<div class="new">New</div>
-							<div class="sale">Sale</div>
-							<div class="overlay overlay-books"></div>
-						</div>
-
-						<div class="books-item-info">
-							<div class="books-author">Callum Bailey</div>
-							<a href="17_product_details.html" class="books-title h5">Search Marketing</a>
-
-							<div class="books-price">$58.00</div>
-						</div>
-
-						<a href="19_cart.html" class="btn btn-small btn--dark add">
-							<span class="text">Add to Cart</span>
-							<i class="seoicon-commerce"></i>
-						</a>
-
-					</div>
-				</div>
-			</div>
-
-			<div class="row pb120">
-
-				<div class="col-lg-12">
-
-					<nav class="navigation align-center">
-
-						<a href="#" class="page-numbers bg-border-color current"><span>1</span></a>
-						<a href="#" class="page-numbers bg-border-color"><span>2</span></a>
-						<a href="#" class="page-numbers bg-border-color"><span>3</span></a>
-						<a href="#" class="page-numbers bg-border-color"><span>4</span></a>
-						<a href="#" class="page-numbers bg-border-color"><span>5</span></a>
-
-						<svg class="btn-prev">
-							<use xlink:href="#arrow-left"></use>
-						</svg>
-						<svg class="btn-next">
-							<use xlink:href="#arrow-right"></use>
-						</svg>
-
-					</nav>
-
-				</div>
-
-			</div>
-		</div>
-	</div>
-	<!-- End Books products grid -->
-
-
-</div>
+<iframe src="shop_bootstrap.html" style="width:100%;border:0px;height:1360px" scrolling="no" id="iframe" onload="ResizeFunction()" onresize="ResizeFunction()"></iframe>
 
 <!-- Footer -->
 <footer class="footer">
@@ -669,15 +391,6 @@
 <script src="js/js-plugins/MarkerClusterGroup.js"></script>
 
 <script src="js/main.js"></script>
-
-<!-- jQuery-scripts for Modules (Send Message) -->
-<script src="modules/forms/src/js/jquery.validate.min.js"></script>
-<script src="modules/forms/src/js/sweetalert2.all.js"></script>
-<script src="modules/forms/src/js/scripts.js"></script>
-<!-- /jQuery-scripts for Modules (Send Message) -->
-
-<!-- ...end JS Script -->
-
 
 </body>
 </html>
