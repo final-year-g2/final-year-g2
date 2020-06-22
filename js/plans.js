@@ -12,8 +12,8 @@ function change_month(months){
 
   var i=0;
   var mon = months;
-  if(months==5){months = "5 + 1*"}
-  if(months==10){months = "10 + 2*"}
+  if(months==6){months = "5 + 1*"}
+  if(months==12){months = "10 + 2*"}
   while(i<table.length){
       table[i].innerHTML = "{} Months".format(months)
       document.getElementById("price_"+i).innerHTML = "₹ "+ cost[i]*mon;

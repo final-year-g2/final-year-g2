@@ -4,7 +4,7 @@
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Zopens Network - Internet Service Provider</title>
+	<title>ZOPENS Network - Internet Service Provider</title>
 	<link rel="icon" href="img/logo.png" type="image/png">
 
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
@@ -18,7 +18,6 @@
 	<link rel="stylesheet" type="text/css" href="css/widgets-styles.css">
 	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css">
 
-
 	<!--Plugins styles-->
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
@@ -26,66 +25,46 @@
 	<link rel="stylesheet" type="text/css" href="css/primary-menu.css">
 	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
 
-
 	<!--External fonts-->
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
 	<style media="screen">
-		.active_row{
-			 background-color: #b8daff !important;
-			 color:#0c5460
+	.vertical-center {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		width:100%;
+		transform: translateY(-50%);
+	}
+	.header-container {
+		background-image:url('img/pattern-bg-lightblue.jpg');
+		background:cover;
+		height: 200px;
+		width:100%;
+		position: relative;
+	}
+
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		  color: #797676c7 !important;
+		  opacity: 1; /* Firefox */
+		}
+
+		:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		  color: #797676c7 !important;
+		}
+
+		::-ms-input-placeholder { /* Microsoft Edge */
+		  color:#797676c7 !important;
 		}
 	</style>
 
 
-	<script type="text/javascript">
-
-			window.onclick = e => {
-			    var itemclicked = e.target.className;
-					if(itemclicked =="fa fa-shopping-cart" || itemclicked == "cart-count")
-					{	var items = 0;
-						if(items!=0){window.location.href="cart.html";}
-						else{
-								if(document.getElementById("empty_cart").style.display=="block")
-								{document.getElementById("empty_cart").style="display:none";}
-							 	else{document.getElementById("empty_cart").style="display:block";}
-				 		}
-					}
-					else{document.getElementById("empty_cart").style="display:none";}
-			}
-
-	</script>
-
-	<!-- Firebase -->
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
-
-	<!-- Uncomment here -->
-	<!-- <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
-	<script>
-		// Your web app's Firebase configuration
-		var firebaseConfig = {
-			apiKey: "AIzaSyCPneO4tHlcLE1o19sqzFPyryDb2MmlXo4",
-			authDomain: "zopens-network.firebaseapp.com",
-			databaseURL: "https://zopens-network.firebaseio.com",
-			projectId: "zopens-network",
-			storageBucket: "zopens-network.appspot.com",
-			messagingSenderId: "291704072534",
-			appId: "1:291704072534:web:e5e335d2d00ec918090ef7"
-		};
-		// Initialize Firebase
-		firebase.initializeApp(firebaseConfig);
-	</script>
-
-	<script src="Firebase/firebase.js"></script> -->
 </head>
 
 
 <body>
 
 <!-- Header -->
-
 <div class="top-bar top-bar" style="background-color:#13b6ffba">
 	<div class="container">
 		<div class="top-bar-contact">
@@ -224,341 +203,124 @@
 </header>
 <!-- ... End Header -->
 
+
 <div class="content-wrapper">
 
-	<!-- Stunning header -->
-	<div class="stunning-header stunning-header-bg-orange">
-		<div class="stunning-header-content">
-			<h1 class="stunning-header-title">Broadband Service</h1>
+	<!-- Stunning Header -->
+	<div class="header-container">
+		<div class="vertical-center" style="text-align:center;">
+			<h1 style="text-align:center;color:white">Register with Us</h1>
 		</div>
 	</div>
-	<!-- End Stunning header -->
+	<!-- Stunning Header Ends-->
 
 
-	<!-- Pricing table -->
-	<div class="container-fluid">
-		<div class="row">
-			<div class="pricing-tables medium-padding120 bg-border-color">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
-							<div class="heading align-center">
-								<h4 class="h1 heading-title">Our Pricing Packages</h4>
-								<div class="heading-line">
-	                <div style="color:black;width:100%;text-align:center;">
-	                    <h5>
-	                       Pay for <span style="color:#ed1c24;">10 Months</span> and get <span style="color:#ed1c24;">2 Months</span> free.
-	                    </h5>
-	                </div>
-                    <span class="short-line"></span>
-                    <span class="long-line"></span>
-                </div>
+	<br>
 
-							</div>
-						</div>
-					</div>
 
-					<div class="row" style="margin-top:5px; margin-bottom:15px">
-							<div class="col-lg-2"></div>
-							<div class="col-lg-1" style="margin-left:20px">
-									<p class="text modalHeaderAlign" style="line-height: 60px; color:black;font-size:22px;margin-bottom:5px;">
-									Months  </p>
-							</div>
-							<div class="col-lg-2" id="chooseCityMain">
-									<div class="nice-select" tabindex="0" style="background-color:#4cc2c0; color:#fff">
-										<span class="current">1 Month</span>
-										<ul class="list">
-											<li data-value="1" class="option" style="color:black;padding:0px" onclick="change_month(1)">1 Month</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_month(3)">3 Months</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_month(6)">5 Months</li>
-											<li data-value="15" class="option selected focus" style="color:black;padding:0px" onclick="change_month(12)">10 Months</li>
-										</ul>
-									</div>
-							</div>
-							<div class="col-lg-1"></div>
-							<div class="col-lg-1">
-									<p class="text modalHeaderAlign" style="line-height: 60px; color:black;font-size:22px;margin-bottom:5px;">
-									 Speed </p>
-							</div>
-							<div class="col-lg-2" id="chooseCityMain">
-									<div class="nice-select" tabindex="0" style="background-color:#e43c00; color:#fff">
-										<span class="current">10 Mbps</span>
-										<ul class="list">
-											<li data-value="1" class="option" style="color:black;padding:0px" onclick="change_speed(0)">3 Mbps</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_speed(1)">5 Mbps</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_speed(2)">10 Mbps</li>
-											<li data-value="1" class="option" style="color:black;padding:0px" onclick="change_speed(3)">20 Mbps</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_speed(4)">25 Mbps</li>
-											<li data-value="9" class="option" style="color:black;padding:0px" onclick="change_speed(5)">50 Mbps</li>
-											<li data-value="15" class="option selected focus" style="color:black;padding:0px" onclick="change_speed(6)">100 Mbps</li>
-										</ul>
-									</div>
-							</div>
-							<div class="col-lg-1"></div>
-							<div class="col-lg-2"></div>
-					</div>
-
-					<div class="row">
-						<div class="pricing-tables-wrap" style="text-align:center;">
-							<br><br>
-
-							<table class="table table-bordered table-striped table-hover" style="width:80%;margin: 0 auto;">
-							  <thead>
-									<tr style="background-color: #343a40;color:#fff">
-										<th scope="col" style="text-align:center;">Validity</th>
-										<th scope="col" style="text-align:center;">Speed</th>
-										<!-- <th scope="col" style="text-align:center;">High Speed Data Limit</th> -->
-							      <th scope="col" style="text-align:center;">Bandwidth</th>
-							      <th scope="col" style="text-align:center;">Price **</th>
-							    </tr>
-							  </thead>
-							  <tbody id="price_table">
-							    <tr id="r0">
-							      <td class="month_column">1 Month</td>
-										<td style="">3 Mbps</td>
-										<!-- <td class="datalimit_column">50 GB</td> -->
-							      <td>Unlimited</td>
-							      <td style="color:black" id="price_0">₹ 700</td>
-							    </tr>
-							    <tr id="r1">
-							      <td class="month_column">1 Month</td>
-										<td>5 Mbps</td>
-										<!-- <td class="datalimit_column">50 GB</td> -->
-							      <td>Unlimited</td>
-							      <td style="color:black" id="price_1">₹ 900</td>
-							    </tr>
-							    <tr id="r2" class="active_row">
-							      <td class="month_column">1 Month</td>
-										<td>10 Mbps</td>
-										<!-- <td class="datalimit_column">50 GB</td> -->
-							      <td>Unlimited</td>
-							      <td style="color:black"  id="price_2">₹ 1200</td>
-							    </tr>
-									<tr id="r3">
-							      <td class="month_column">1 Month</td>
-										<td>20 Mbps</td>
-										<!-- <td class="datalimit_column">50 GB</td> -->
-							      <td>Unlimited</td>
-							      <td style="color:black" id="price_3">₹ 1900</td>
-							    </tr>
-							    <tr id="r4">
-							      <td class="month_column">1 Month</td>
-										<td>25 Mbps</td>
-										<!-- <td class="datalimit_column">50 GB</td> -->
-							      <td>Unlimited</td>
-							      <td style="color:black" id="price_4">₹ 2250</td>
-							    </tr>
-							    <tr id="r5">
-							      <td class="month_column">1 Month</td>
-										<td>50 Mbps</td>
-										<!-- <td class="datalimit_column">50 GB</td> -->
-							      <td>Unlimited</td>
-							      <td style="color:black" id="price_5">₹ 2800</td>
-							    </tr>
-									<tr id="r6">
-							      <td class="month_column">1 Month</td>
-										<td>100 Mbps</td>
-										<!-- <td class="datalimit_column">50 GB</td> -->
-							      <td>Unlimited</td>
-							      <td style="color:black" id="price_6">₹ 4200</td>
-							    </tr>
-							  </tbody>
-							</table>
-
-							<h5 style="margin-top:30px">Your Final Price after GST would be <span style="color:#00adef">₹ </span><span id="final_price" style="color:#00adef">1,416</span></h5>
-							<br>
-						</div>
-					</div>
-
-					<div class="heading-line" style=" margin-top:40px;">
-						<div style="color:black;width:100%;text-align:center;">
-								<h5><span style="color:#ed1c24">Terms &amp; Conditions:</span></h5>
-								<br>
-								<span>Plans rates will remain same irrespective of  any area or location all over Maharashtra. All prices are excluding  GST. <br> Call <span style="color:#ed1c24">+91 7620627788</span> for more offers and discounts.</span>
-						</div>
-					</div>
-
-				<div style="text-align:center;margin-top: 30px; margin-bottom: -70px">
-						<a href="https://github.com/final-year-g2/final-year-g2.github.io/raw/master/img/Brochure.pdf" class="btn btn-medium btn--green">
-							<span class="text">Download PDF Brochure</span>
-							<span class="semicircle"></span>
-						</a>
-						<a href="https://forms.gle/bc5VZPdmM3wvMnot5" target="_blank" class="btn btn-medium btn--blue">
-							<span class="text">Register with Us</span>
-							<span class="semicircle"></span>
-						</a>
-				</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Pricing table -->
-
-	<!-- Blue Part -->
-	<div class="container-fluid">
-		<div class="row pt80 pb80 bg-boxed-blue">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 table-cell">
-
-						<div class="heading">
-							<h4 class="h1 heading-title c-white no-margin">Test Internet Speed yourself!</h4>
-							<p class="heading-text c-white no-margin">Check our Internet Speed anytime at your Home.
-							</p>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 table-cell">
-						<a href="https://www.speedtest.net/server/zopens" target="_blank" class="btn btn-medium btn--dark btn-hover-shadow">
-							<span class="text">Check our Server Speed</span>
-							<span class="semicircle"></span>
-						</a>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Blue Part Ends -->
-
-	<!-- Info Box -->
+	<!-- Contact form -->
 	<div class="container">
-		<div class="row pt120 mb30">
+		<div style="padding:60px 0px">
 
-			<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-				<div class="heading align-center">
-					<h4 class="heading-title h1">Unrivalled Levels of Service</h4>
-					<div class="heading-line">
-						<span class="short-line"></span>
-						<span class="long-line"></span>
+			<form id="textForm" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfWZnCqB7fnceXmJlKx0JlAUJxQoSuIdV40vmN2mkmwMUNF6g/formResponse?" target="hidden_iframe">
+				 <!-- onsubmit="func()"> -->
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<input name="entry.1338680096" id="entry.1338680096" class="input-standard-grey" placeholder="Full Name" type="text" required style="color:black">
 					</div>
-					<p class="heading-text">We provide 24/7 with an appreciable problem solving time of less than 2 hours. Comparatively Cheaper rates of service
-					</p>
+
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<input name="entry.887837918" id="entry.887837918" class="input-standard-grey" placeholder="Phone / Mobile Number" type="text" required>
+					</div>
 				</div>
+
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<input name="entry.908527243" id="entry.908527243" class="input-standard-grey" placeholder="Email Adress" type="text" required style="color:black">
+					</div>
+
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<input name="entry.1512288643" id="entry.1512288643" class="input-standard-grey" placeholder="Alternate Mobile Number" type="text" required>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<input name="entry.336357637" id="entry.336357637" class="input-standard-grey" placeholder="Address Line 1" required></input>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<input name="entry.210865936" id="entry.210865936" class="input-standard-grey" placeholder="Address Line 2" required></input>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<input name="entry.2129207113" id="entry.2129207113" class="input-standard-grey" placeholder="District" type="text" required style="color:black">
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<input name="entry.871169116" id="entry.871169116" class="input-standard-grey" placeholder="Pincode" type="text" required>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<input name="entry.1323477373" id="entry.1323477373" class="input-standard-grey" placeholder="Plan Option" type="text" style="color:black" required>
+					</div>
+				</div>
+
+				<button type="submit" id="textForm_submit" style="display:none">Submit</button>
+			</form>
+
+			<form class="" action="index.html" method="post">
+				<div class="row" style="text-align:center">
+					<div class="col-lg-6  col-sm-12 col-xs-12">
+						<label for="exampleFormControlFile1" style="color:black">Aadhar File Upload</label>
+						<input type="file" class="form-control-file" id="exampleFormControlFile1">
+					</div>
+
+					<div class="col-lg-6  col-sm-12 col-xs-12">
+						<label for="exampleFormControlFile1" style="color:black">Payment Receipt Upload</label>
+						<input type="file" class="form-control-file" id="exampleFormControlFile1">
+					</div>
+				</div>
+			</form>
+
+			<div class="row" style="text-align:center">
+				<div class="col-lg-3 col-sm-0 col-xs-0"></div>
+				<div class="col-lg-3 col-sm-6 col-xs-6">
+					<button type="button" class="btn btn-small btn--warning" style="text-align:center;background-color:#ffcd00;color:black" onclick="location.reload()">
+						<span class="text">Reset Form</span>
+					</button>
+				</div>
+				<div class="col-lg-3 col-sm-6 col-xs-6">
+					<button type="button" class="btn btn-small btn--primary" style="text-align:center">
+						<span class="text" onclick="func()">Submit Now</span>
+					</button>
+				</div>
+				<div class="col-lg-3 col-sm-0 col-xs-0"></div>
 			</div>
+
+			<iframe name="hidden_iframe" style="display:none;"></iframe>
+		 	<script type="text/javascript">
+				 function func(){
+					 document.getElementById('textForm').submit();
+					 // document.getElementById('textForm_submit').click();
+					 swal("Thank you!", "Your message has been sent. Will contact you shortly", "success")
+						.then((value) => {
+						  location.reload();
+						});
+
+					 // alert("Your message has been sent. Thank you!");
+					 // console.log("Date sent");
+					 // location.reload();
+				 }
+			 </script>
 
 		</div>
-
-		<div class="row mb30">
-			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<div class="info-box--modern">
-					<div class="info-box-image">
-						<img src="img/info-box25.png" alt="image">
-					</div>
-					<div class="info-box-content">
-						<h5 class="info-box-title">The Best Network Speed</h5>
-						<p class="text">We provide minimum of 3 Mbps of speed to maximum of 100 Mbps at very minimal service charges.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<div class="info-box--modern">
-					<div class="info-box-image">
-						<img src="img/info-box26.png" alt="image">
-					</div>
-					<div class="info-box-content">
-						<h5 class="info-box-title">Upto 98% uptime garauntee</h5>
-						<p class="text">We gaurantee upto 98% of up time at constant speed as per customer's request.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row mb60">
-			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<div class="info-box--modern">
-					<div class="info-box-image">
-						<img src="img/info-box27.png" alt="image">
-					</div>
-					<div class="info-box-content">
-						<h5 class="info-box-title">High Speed even at Peak hours</h5>
-						<p class="text">Constant and High  speed internet service all over the clock
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<div class="info-box--modern">
-					<div class="info-box-image">
-						<img src="img/info-box28.png" alt="image">
-					</div>
-					<div class="info-box-content">
-						<h5 class="info-box-title">24/7 Support Service</h5>
-						<p class="text">We believe customer service is important in technology business so we provide 24/7 service
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<br><br>
-
 	</div>
-	<!-- End Info Box -->
-
-	<!-- Subscribe Form -->
-	<div class="container-fluid bg-green-color" style="margin-top:-60px">
-	            <div class="row">
-	                <div class="container-fluid" style="margin:0 25px;">
-
-	                    <div class="row">
-
-	                        <div class="subscribe scrollme">
-
-	                            <div class="col-lg-7 col-lg-offset-4 col-md-7 col-md-offset-4 col-sm-12 col-xs-12" style="text-align:center;">
-	                                <h4 class="subscribe-title">
-	                                Quick Connect For New Connection
-	                                </h4>
-	                                <form  enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeIAnrZr2Ti_nrfx9EDm3uBwtuuYAFERZpZvFKzjHPa-q_sNg/formResponse?" target="hidden_iframe" onsubmit="func()">
-			                                <div class="row">
-			                                	<div class="col-lg-4">
-																					 <input name="entry.2005620554" id="entry.2005620554" class="input-standard-grey" placeholder="Your Name" type="text" required>
-			                                   </div>
-			                                	<div class="col-lg-4">
-			                                		 <input name="entry.1166974658" id="entry.1166974658" class="input-standard-grey" placeholder="Phone Number" type="text" required>
-			                                  </div>
-			                                	<div class="col-lg-4">
-			                                			<input name="entry.1065046570" id="entry.1065046570" class="input-standard-grey" placeholder="Location" required></input>
-			                                  </div>
-			                                </div>
-																			<input style="display:none;" name="entry.1045781291" id="entry.1045781291" value="quick@connect.form" type="email">
-																			<input style="display:none;" name="entry.538319479" id="entry.538319479" value="None" type="text">
-																			<input style="display:none;"  name="entry.839337160" id="entry.839337160"placeholder="Quick Connect Form"></input>
-
-	                                    <button type="submit" class="btn btn--dark submit-width">
-	                                        Submit
-	                                        <span class="semicircle--right"></span>
-	                                    </button>
-	                                </form>
-
-																	<iframe name="hidden_iframe" style="display:none;"></iframe>
-																	 <script type="text/javascript">
-																		 function func(){
-																			 alert("Your message has been sent. Thank you!");
-																			 console.log("Date sent");
-																			 location.reload();
-																		 }
-																	 </script>
-
-	                            </div>
-
-	                            <div class="images-block">
-	                                <img src="img/subscr-gear.png" alt="gear" class="gear" style="opacity: 1; transform: rotateZ(360deg);">
-	                                <img src="img/subscr1.png" alt="mail" class="mail" style="opacity: 1; bottom: 0px;">
-	                                <img src="img/subscr-mailopen.png" alt="mail" class="mail-2" style="opacity: 1; right: 20px;">
-	                            </div>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	<!-- End Subscribe Form -->
+	<!-- End Contact form -->
 
 </div>
 
@@ -666,7 +428,7 @@
 							<svg enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="  38.7,36.4 56,32 38.7,27.6 42,22 36.4,25.3 32,8 27.6,25.3 22,22 25.3,27.6 8,32 25.3,36.4 22,42 27.6,38.7 32,56 36.4,38.7 42,42   " stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></polygon><circle cx="32" cy="32" fill="none" r="4" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></circle><path d="  M26.1,53.2c-7.9-2.2-13.9-8.6-15.6-16.7" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path><path d="  M53.5,36.9c-1.8,8.1-8.2,14.6-16.3,16.5" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path><path d="  M36.9,10.5c8.2,1.9,14.7,8.3,16.6,16.6" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path><path d="  M10.5,27.1c1.9-8.2,8.3-14.6,16.4-16.5" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path></svg>
 						</div>
 						<div class="content">
-							<a href="#" class="title">Service Area</a>
+							<a href="#" class="title">Jalgaon</a>
 							<p class="sub-title">Maharashtra</p>
 						</div>
 					</div>
@@ -751,9 +513,27 @@
 <script src="js/js-plugins/MarkerClusterGroup.js"></script>
 
 <script src="js/main.js"></script>
-<script src="./js/plans.js"></script>
+
 <!-- ...end JS Script -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+
+		window.onclick = e => {
+				var itemclicked = e.target.className;
+				if(itemclicked =="fa fa-shopping-cart" || itemclicked == "cart-count")
+				{	var items = 0;
+					if(items!=0){window.location.href="cart.html";}
+					else{
+							if(document.getElementById("empty_cart").style.display=="block")
+							{document.getElementById("empty_cart").style="display:none";}
+							else{document.getElementById("empty_cart").style="display:block";}
+					}
+				}
+				else{document.getElementById("empty_cart").style="display:none";}
+		}
+
+</script>
+
 
 </body>
 </html>
-
