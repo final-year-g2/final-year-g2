@@ -29,33 +29,33 @@
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
 	<style media="screen">
-	.vertical-center {
-		margin: 0;
-		position: absolute;
-		top: 50%;
-		width:100%;
-		transform: translateY(-50%);
-	}
-	.header-container {
-		background-image:url('img/pattern-bg-lightblue.jpg');
-		background:cover;
-		height: 200px;
-		width:100%;
-		position: relative;
-	}
-
-	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-		  color: #797676c7 !important;
-		  opacity: 1; /* Firefox */
+		.vertical-center {
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			width:100%;
+			transform: translateY(-50%);
+		}
+		.header-container {
+			background-image:url('img/pattern-bg-lightblue.jpg');
+			background:cover;
+			height: 200px;
+			width:100%;
+			position: relative;
 		}
 
-		:-ms-input-placeholder { /* Internet Explorer 10-11 */
-		  color: #797676c7 !important;
-		}
+		::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			  color: #797676c7 !important;
+			  opacity: 1; /* Firefox */
+			}
 
-		::-ms-input-placeholder { /* Microsoft Edge */
-		  color:#797676c7 !important;
-		}
+			:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			  color: #797676c7 !important;
+			}
+
+			::-ms-input-placeholder { /* Microsoft Edge */
+			  color:#797676c7 !important;
+			}
 	</style>
 
 
@@ -286,20 +286,18 @@
 
 				<input type="text" id="entry.56802443" name="entry.56802443" value="No link yet" style="display:none">
 				<input type="text" id="entry.1876387829" name="entry.1876387829" value="No link yet" style="display:none">
-
-				<button type="submit" id="textForm_submit" style="display:none">Submit</button>
 			</form>
-
+			<br>
 			<form class="" action="index.html" method="post">
-				<div class="row" style="text-align:center">
+				<div class="row" >
 					<div class="col-lg-6  col-sm-12 col-xs-12">
-						<label for="exampleFormControlFile1" style="color:black">Aadhar File Upload</label>
-						<input type="file" class="form-control-file" id="exampleFormControlFile1">
+						<label for="exampleFormControlFile1" style="color:black;margin-left:40px">Aadhar File Upload</label>
+						<input type="file" class="form-control-file" id="aadhar" accept=".pdf,image/*" required>
 					</div>
 
 					<div class="col-lg-6  col-sm-12 col-xs-12">
-						<label for="exampleFormControlFile1" style="color:black">Payment Receipt Upload</label>
-						<input type="file" class="form-control-file" id="exampleFormControlFile1">
+						<label for="exampleFormControlFile1" style="color:black;margin-left:40px">Payment Receipt Upload</label>
+						<input type="file" class="form-control-file" id="payment" accept=".pdf,image/*" required>
 					</div>
 				</div>
 			</form>
@@ -313,27 +311,13 @@
 				</div>
 				<div class="col-lg-3 col-sm-6 col-xs-6">
 					<button type="button" class="btn btn-small btn--primary" style="text-align:center">
-						<span class="text" onclick="func()">Submit Now</span>
+						<span class="text" onclick="upload_aadhar()">Submit Now</span>
 					</button>
 				</div>
 				<div class="col-lg-3 col-sm-0 col-xs-0"></div>
 			</div>
 
 			<iframe name="hidden_iframe" style="display:none;"></iframe>
-		 	<script type="text/javascript">
-				 function func(){
-					 document.getElementById('textForm').submit();
-					 // document.getElementById('textForm_submit').click();
-					 swal("Thank you!", "Your message has been sent. Will contact you shortly", "success")
-						.then((value) => {
-						  location.reload();
-						});
-
-					 // alert("Your message has been sent. Thank you!");
-					 // console.log("Date sent");
-					 // location.reload();
-				 }
-			 </script>
 
 		</div>
 	</div>
@@ -530,6 +514,7 @@
 <script src="js/js-plugins/MarkerClusterGroup.js"></script>
 
 <script src="js/main.js"></script>
+<script src="js/upload_client_details.js"></script>
 
 <!-- ...end JS Script -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -550,6 +535,26 @@
 		}
 
 </script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-storage.js"></script>
+
+<script>
+	// Your web app's Firebase configuration
+	var firebaseConfig = {
+		apiKey: "AIzaSyCPneO4tHlcLE1o19sqzFPyryDb2MmlXo4",
+		authDomain: "zopens-network.firebaseapp.com",
+		databaseURL: "https://zopens-network.firebaseio.com",
+		projectId: "zopens-network",
+		storageBucket: "zopens-network.appspot.com",
+		messagingSenderId: "291704072534",
+		appId: "1:291704072534:web:e5e335d2d00ec918090ef7"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+</script>
+
 
 
 </body>
