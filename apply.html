@@ -39,37 +39,23 @@
 		.header-container {
 			background-image:url('img/pattern-bg-breez.jpg');
 			background:cover;
-			height: 400px;
+			height: 200px;
 			width:100%;
 			position: relative;
 		}
 
-		.card{
-			background-color:#f1f3f3; border-radius:20px; padding:20px 40px;
-			margin-bottom: 25px;
-		}
-		.card:hover{transform: scale(1.05);}
+		::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			  color: #797676c7 !important;
+			  opacity: 1; /* Firefox */
+			}
 
-		.btn-primary{background-color:#007bff !important;}
-		.btn-warning{background-color:#ffc107 !important; color:#212529 !important;}
+			:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			  color: #797676c7 !important;
+			}
 
-		.btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 1.5rem;
-		}
-
-		.card-title{margin-bottom:10px}
-		.card-text, p, ul{color:#000000bf}
-		.job-title{color:#007bff !important;}
-		.sub-title, .heading-text{color:white !important;}
+			::-ms-input-placeholder { /* Microsoft Edge */
+			  color:#797676c7 !important;
+			}
 	</style>
 
 </head>
@@ -222,151 +208,68 @@
 	<!-- Stunning Header -->
 	<div class="header-container">
 		<div class="vertical-center" style="text-align:center;">
-			<img src="img/Logo/g.png" style="height:70px;width:auto;">
-			<h1 style="text-align:center;color:white">We're Hiring for</h1>
-			<img src="img/Logo/network.png" style="height:200px;width:auto;">
+			<h1 style="text-align:center;color:white">We're Hiring</h1>
 		</div>
 	</div>
 	<!-- Stunning Header Ends-->
+
+
 	<br>
 
 
-	<div class="container" style="margin:20px auto;">
+	<!-- Contact form -->
+	<div class="container">
+		<div style="padding:60px 0px">
 
-		<div class="row">
-			<!-- Tele Caller -->
-			<div class="col-lg-6">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Job title: <span class="job-title">TelleCaller (Female only)</span></h5>
-
-						<p class="card-text">Roles & Responsibilties:
-							<ul style="color:#000000bf;margin-top:-10px">
-								<li>Attending calls from customers</li>
-								<li>Solving customer queries</li>
-								<li>Convincing the purchase of items</li>
-								<li>Addressing clients</li>
-								<li>Daily call record logbook</li>
-							</ul>
-						</p>
-						<p>Vacancies:  1</p>
-						<a type="button" class="btn btn-primary" href="apply.html">Apply now</a>
-					</div>
-				</div>
-			</div>
-
-			<!-- Marketing Assistant -->
-			<div class="col-lg-6">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Job title: <span class="job-title">Marketing Assistant</span></h5>
-
-						<p class="card-text">
-							Roles & Responsibilties:
-							<ul style="color:#000000bf;margin-top:-10px">
-								<li>Analysing questionnaires</li>
-								<li>Promotional Activities</li>
-								<li>Customer visits</li>
-								<li>Market research</li>
-								<li>Cold Calling</li>
-							</ul>
-						</p>
-						<p>Vacancies:  2</p>
-						<a type="button" class="btn btn-primary" href="apply.html">Apply now</a>
-					</div>
-				</div>
-			</div>
-
-			<!-- Accountant- -->
-			<div class="col-lg-6">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Job title: <span class="job-title">Accountant</span></h5>
-
-						<p class="card-text">
-							Roles & Responsibilties:
-							<ul style="color:#000000bf;margin-top:-10px">
-								<li>Maintaining Daily transaction details</li>
-								<li>Material Purchase order</li>
-								<li>Inventory Management</li>
-								<li>Daily balance Sheet</li>
-								<li>Salary Distribution</li>
-								<li>GST calculations and returns</li>
-								<li>Invoice Generation</li>
-							</ul>
-						</p>
-						<p>Vacancies:  1</p>
-						<a type="button" class="btn btn-primary" href="apply.html">Apply now</a>
-					</div>
-				</div>
-			</div>
-
-			<!-- Technical Assistant- -->
-			<div class="col-lg-6">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Job title: <span class="job-title">Technical Assistant</span></h5>
-
-						<p class="card-text">
-							Roles & Responsibilties:
-							<ul style="color:#000000bf;margin-top:-10px">
-								<li>Customer service</li>
-								<li>Router installation</li>
-								<li>LAN Connection</li>
-								<li>WAN Connection</li>
-							</ul>
-						</p>
-						<p>Vacancies:  2</p>
-						<a type="button" class="btn btn-primary" href="apply.html">Apply now</a>
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-
-
-	<div class="container-fluid">
-		<div class="row medium-padding80 bg-border-color contacts-shadow">
-			<div class="container">
+			<form id="textForm" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfV5U1eSJAO1ZZeFrXN5sJatSt3YA7iTiNWMCHrMb-1abW3PQ/formResponse?" target="hidden_iframe">
+				 <!-- onsubmit="func()"> -->
 				<div class="row">
-					<div class="contacts">
-						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-							<div class="contacts-item">
-								<img src="img/contact7.png" alt="phone">
-								<div class="content">
-									<a href="#" class="title">Service Area</a>
-									<p>Jalgaon, Maharashtra</p>
-								</div>
-							</div>
-						</div>
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<input name="entry.1894035497" id="entry.1894035497" class="input-standard-grey" placeholder="Full Name" type="text" required style="color:black">
+					</div>
 
-						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-							<div class="contacts-item">
-								<img src="img/contact8.png" alt="phone">
-								<div class="content">
-									<a href="#" class="title">Online Support</a>
-									<p>support@zopensnetwork.com </p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-							<div class="contacts-item">
-								<img src="img/contact9.png" alt="phone">
-								<div class="content">
-									<a href="#" class="title">+91 76206 27788</a>
-									<p>Mon-Fri 9am-6pm</p>
-								</div>
-							</div>
-						</div>
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<input name="entry.1702993881" id="entry.1702993881" class="input-standard-grey" placeholder="Phone / Mobile Number" type="number" style="color:black" required>
 					</div>
 				</div>
+
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<input name="entry.1449165927" id="entry.1449165927" class="input-standard-grey" placeholder="Email Address" type="email" required style="color:black">
+					</div>
+
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<input name="entry.1023748513" id="entry.1023748513" class="input-standard-grey" placeholder="Applying for Post" type="text" required style="color:black">
+					</div>
+				</div>
+
+				<input type="text" name="entry.227423126" id="entry.227423126" value="No link yet" style="display:none">
+			</form>
+
+			<!-- <div class="row">
+				<div class="col-lg-3 col-sm-6 col-xs-6"></div> -->
+					<div class="col-lg-6  col-sm-12 col-xs-12">
+						<label for="exampleFormControlFile1" style="color:black;margin-left:40px">Resume Upload (in .PDF format)</label>
+						<input type="file" class="form-control-file" id="resume" accept=".pdf" required>
+					</div>
+				<!-- <div class="col-lg-3 col-sm-6 col-xs-6"></div>
+			</div> -->
+
+			<div class="row" style="text-align:center">
+				<div class="col-lg-3 col-sm-6 col-xs-6"></div>
+				<div class="col-lg-6 col-sm-6 col-xs-6">
+					<button type="button" class="btn btn-small btn--primary" style="text-align:center;margin-top:15px">
+						<span class="text" onclick="upload_resume()">Submit Now</span>
+					</button>
+				</div>
+				<div class="col-lg-3 col-sm-6 col-xs-6"></div>
 			</div>
+
+			<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 		</div>
 	</div>
-</div>
+	<!-- End Contact form -->
 
 <!-- Footer -->
 <footer class="footer">
@@ -557,7 +460,7 @@
 <script src="js/js-plugins/MarkerClusterGroup.js"></script>
 
 <script src="js/main.js"></script>
-<script src="js/upload_client_details.js"></script>
+<script src="js/upload_resume.js"></script>
 
 <!-- ...end JS Script -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
